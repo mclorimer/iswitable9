@@ -7,27 +7,29 @@
 //
 
 import Foundation
+import UIKit
+
+enum BogusUser {
+    case one, two
+}
 
 class User {
-    var id: Int
-    var userName: String
-    var profileImage: String
+    var user: ProxyUser
+    var profileImage: UIImage
     var blurb: String
     var location: String
     var origin: String
     var recommendations: [String]
     
     init(
-        id: Int,
-        userName: String,
-        profileImage: String,
+        user: ProxyUser,
+        profileImage: UIImage,
         blurb: String,
         location: String,
         origin: String,
         recommendations: [String]
         ) {
-        self.id = id
-        self.userName = userName
+        self.user = user
         self.profileImage = profileImage
         self.blurb = blurb
         self.location = location
@@ -35,15 +37,13 @@ class User {
         self.recommendations = recommendations
     }
     
-    convenience init() {
-        self.init(
-            id: 0,
-            userName: "",
-            profileImage: "",
-            blurb: "",
-            location: "",
-            origin: "",
-            recommendations: []
-        )
+    convenience init(with user: ProxyUser, image: UIImage, number: BogusUser) {
+        switch number {
+        case .one:
+            self.init(user: user, profileImage: image, blurb: "i fly like paper get high like planes", location: "London, Arkansas", origin: "Londond England", recommendations: ["Wears wonderful hats", "singer!"])
+        case .two:
+            self.init(user: user, profileImage: image, blurb: "excuse me while I kiss the sky", location: "New York City, NY", origin: "Seattle, Washington", recommendations: ["Plays guitar", "strong, almost religious zeal for peace and love in humanity"])
+        }
     }
+    
 }

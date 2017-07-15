@@ -14,6 +14,7 @@
 		81D3239F1F19F5210035AEFE /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D3239E1F19F5210035AEFE /* DiscoveryViewController.swift */; };
 		81D323A11F19F8C00035AEFE /* UserProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D323A01F19F8C00035AEFE /* UserProxy.swift */; };
 		81D323A31F19FC900035AEFE /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D323A21F19FC900035AEFE /* UserTableViewCell.swift */; };
+=		9E71E49D1F19ED5400874C69 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71E49C1F19ED5400874C69 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		81D3239E1F19F5210035AEFE /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoveryViewController.swift; path = ../DiscoveryViewController.swift; sourceTree = "<group>"; };
 		81D323A01F19F8C00035AEFE /* UserProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProxy.swift; sourceTree = "<group>"; };
 		81D323A21F19FC900035AEFE /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		9E71E49C1F19ED5400874C69 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				81D323911F19CC9C0035AEFE /* Assets.xcassets */,
 				81D323931F19CC9C0035AEFE /* LaunchScreen.storyboard */,
 				81D323961F19CC9C0035AEFE /* Info.plist */,
+				9E71E49C1F19ED5400874C69 /* User.swift */,
 			);
 			path = ImmiMeet;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				81D3238B1F19CC9C0035AEFE /* AppDelegate.swift in Sources */,
 				81D3239F1F19F5210035AEFE /* DiscoveryViewController.swift in Sources */,
 				81D323A11F19F8C00035AEFE /* UserProxy.swift in Sources */,
+				9E71E49D1F19ED5400874C69 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +316,7 @@
 				81D3239B1F19CC9C0035AEFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

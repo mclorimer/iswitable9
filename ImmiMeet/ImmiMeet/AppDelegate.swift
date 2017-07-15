@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
     // Stores reference on PubNub client to make sure what it won't be released.
     var client: PubNub!
     var window: UIWindow?
-
-  var immiLabel: UILabel?
+    var mainUser: User!
+    var immiLabel: UILabel?
     var meetLabel: UILabel?
     var immimeetIcon: UIImageView?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -48,9 +48,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
         
         let tabBarController = UITabBarController()
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let chatStoryboard = UIStoryboard(name: "ChatScreens", bundle: nil)
         let profileVC = mainStoryboard.instantiateViewController(withIdentifier: "Profile")
         let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "Discovery")
-        let chatVC = mainStoryboard.instantiateViewController(withIdentifier: "Chat")
+        let chatVC = chatStoryboard.instantiateViewController(withIdentifier: "Chat")
         
         tabBarController.setViewControllers([profileVC, mainVC, chatVC], animated: true)
         

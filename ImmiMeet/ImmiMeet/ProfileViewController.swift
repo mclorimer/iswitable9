@@ -11,7 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     var recs = ["Guy is the best guy.", "I love his hair!", "He's very friendly ;)"]
-    
+    var mainUser: User!
     @IBOutlet weak var userPic: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userOrigin: UILabel!
@@ -30,6 +30,29 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let proxyUser = ProxyUser(id: 0, name: "", username: userName.text!, email: "", immigrant: false)
+        mainUser = User(user: proxyUser, profileImage: userPic.image!, blurb: userBlurb.text!, location: "", origin: userOrigin.text!, recommendations: self.recs)
+        
+        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+        appDelegate.mainUser = mainUser
+        
+        if let initWith = initWithUserMIA {
+            self.recs = initWith.user.recommendations
+            userPic.image = initWith.user.profileImage
+            userName.text = initWith.user.user.username
+            userLanguage.text = initWith.isMIA ? "Tamil" : "English"
+            userBlurb.text = initWith.user.blurb
+            self.recTable.reloadData()
+            
+            let doneButton = UIButton(type: .system)
+            doneButton.setTitle("Done", for: .normal)
+            self.view.addSubview(doneButton)
+            
+            doneButton.translatesAutoresizingMaskIntoConstraints = false
+            doneButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 16).isActive = true
+            doneButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16).isActive = true
+            doneButton.addTarget(self, action: #selector(doneButtonPressed), for: .touchUpInside)
+        }
 
         // grab the correct user pic, name, origin, language, blurb, up/down votes from user object
         
@@ -51,23 +74,6 @@ class ProfileViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if let initWith = initWithUserMIA {
-            self.recs = initWith.user.recommendations
-            userPic.image = initWith.user.profileImage
-            userName.text = initWith.user.user.username
-            userLanguage.text = initWith.isMIA ? "Tamil" : "English"
-            userBlurb.text = initWith.user.blurb
-            self.recTable.reloadData()
-            
-            let doneButton = UIButton(type: .system)
-            doneButton.setTitle("Done", for: .normal)
-            self.view.addSubview(doneButton)
-            
-            doneButton.translatesAutoresizingMaskIntoConstraints = false
-            doneButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 16).isActive = true
-            doneButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16).isActive = true
-            doneButton.addTarget(self, action: #selector(doneButtonPressed), for: .touchUpInside)
-        }
     }
 
     // add a tableview datasource and delegate (extension?)

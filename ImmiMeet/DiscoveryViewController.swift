@@ -65,7 +65,6 @@ extension DiscoveryViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.cellForRow(at: indexPath) as! UserTableViewCell
         
         let user = User(with: cell.user, image: cell.profileImageView.image!, number: number)
-        
         profileVC.initWithUserMIA = (user, isMIA)
         self.present(profileVC, animated: true, completion: nil)
     }

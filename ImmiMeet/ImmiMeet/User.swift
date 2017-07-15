@@ -21,6 +21,7 @@ class User {
     var origin: String
     var recommendations: [String]
     var messageHistory: [PMessage] = []
+    var friends: [User] = []
     
     init(
         user: ProxyUser,

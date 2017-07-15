@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    var recs = [String]()
+    var recs = ["Guy is the best guy.", "I love his hair!", "He's very friendly ;)"]
     
     @IBOutlet weak var userPic: UIImageView!
     @IBOutlet weak var userName: UILabel!
@@ -53,11 +53,31 @@ extension ProfileViewController: UITableViewDelegate {
 }
 
 extension ProfileViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return recs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Rec", for: indexPath)
+        let thisText = recs[indexPath.row]
+        
+        cell.textLabel?.text = "\"" + thisText + "\""
+
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Recommendations"
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
+        view.tintColor = .blue
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = .white
+        header.textLabel?.font = UIFont.systemFont(ofSize: 24, weight: UIFontWeightLight)
     }
 }

@@ -1,6 +1,6 @@
 Project for Table 9 of the New York City 2017 I Stand With Immigrants Hackathon. 
 
-We would like to personally thank each and every speaker who contributed as speakers, administrators, and inspirers for this hackathon. 
+We would like to personally thank each and every person, especially those who are members of the immigrant community here in New York City, who made this event possible. 
 
 
 

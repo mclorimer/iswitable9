@@ -43,6 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
+        DataMessenger.userReceiver = mainVC as! UserReceiver
+        DataMessenger.getUsers()
+        
         return true
     }
 

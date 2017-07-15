@@ -64,8 +64,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             meetLabel!.text = "MEET"
             immimeetIcon!.image = #imageLiteral(resourceName: "immimeetIcon")
             
-            immiLabel!.font = UIFont(name: "Futura-CondensedExtraBold", size: 40)
-            meetLabel!.font = UIFont(name: "Futura-CondensedExtraBold", size: 40)
+            immiLabel!.textColor = .blue
+            meetLabel!.textColor = .blue
+            
+            immiLabel!.font = UIFont(name: "Futura-CondensedExtraBold", size: 60)
+            meetLabel!.font = UIFont(name: "Futura-CondensedExtraBold", size: 60)
             
             _ = [
                   immiLabel!.leadingAnchor.constraint(equalTo: window.leadingAnchor)
@@ -82,7 +85,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.immiLabel!.center.x = window.frame.midX
                 self.meetLabel!.center.x = -(window.frame.midX)
                 self.immimeetIcon!.center.y = window.frame.midY
-            }, completion: nil)
+            }, completion: { finish in
+                UIView.animate(withDuration: 1.5, animations: {
+                self.immiLabel!.alpha = 0
+                self.meetLabel!.alpha = 0
+                self.immimeetIcon!.alpha = 0
+                })
+            })
             
         }
         

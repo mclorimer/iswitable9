@@ -19,6 +19,7 @@
 		9E71E4A51F1A06D700874C69 /* LanguageCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71E4A41F1A06D700874C69 /* LanguageCodes.swift */; };
 		D392646A1F1A1E7A002ED6A0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39264691F1A1E7A002ED6A0 /* ProfileViewController.swift */; };
 		D392646C1F1A2B3C002ED6A0 /* ViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392646B1F1A2B3C002ED6A0 /* ViewHelpers.swift */; };
+		D3D399F61F1A707B008E8DD8 /* MockChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D399F51F1A707B008E8DD8 /* MockChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9E71E4A41F1A06D700874C69 /* LanguageCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageCodes.swift; sourceTree = "<group>"; };
 		D39264691F1A1E7A002ED6A0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D392646B1F1A2B3C002ED6A0 /* ViewHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelpers.swift; sourceTree = "<group>"; };
+		D3D399F51F1A707B008E8DD8 /* MockChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				D39264691F1A1E7A002ED6A0 /* ProfileViewController.swift */,
 				81D3239E1F19F5210035AEFE /* DiscoveryViewController.swift */,
 				81D323A21F19FC900035AEFE /* UserTableViewCell.swift */,
+				D3D399F51F1A707B008E8DD8 /* MockChatViewController.swift */,
 				9E71E4A01F19F66E00874C69 /* APIRequestManager.swift */,
 				81D3238A1F19CC9C0035AEFE /* AppDelegate.swift */,
 				81D323911F19CC9C0035AEFE /* Assets.xcassets */,
@@ -160,6 +163,7 @@
 			files = (
 				81D323A31F19FC900035AEFE /* UserTableViewCell.swift in Sources */,
 				9E71E4A51F1A06D700874C69 /* LanguageCodes.swift in Sources */,
+				D3D399F61F1A707B008E8DD8 /* MockChatViewController.swift in Sources */,
 				9E71E4A31F19F7F500874C69 /* Comment.swift in Sources */,
 				D392646C1F1A2B3C002ED6A0 /* ViewHelpers.swift in Sources */,
 				9E71E4A11F19F66E00874C69 /* APIRequestManager.swift in Sources */,

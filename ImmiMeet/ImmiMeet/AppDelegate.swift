@@ -12,12 +12,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var immiLabel: UILabel?
+    var meetLabel: UILabel?
+    var immimeetIcon: UIImageView?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         window = UIWindow(frame: UIScreen.main.bounds)
+        
         let tabBarController = UITabBarController()
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let profileVC = mainStoryboard.instantiateViewController(withIdentifier: "Profile")
@@ -43,6 +46,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = tabBarController
         
         window?.makeKeyAndVisible()
+        
+        // animation for splash
+        
+        if let window = self.window {
+            immiLabel = UILabel()
+            meetLabel = UILabel()
+            immimeetIcon = UIImageView()
+            
+            window.addSubview(immiLabel!)
+            window.addSubview(meetLabel!)
+            window.addSubview(immimeetIcon!)
+            
+            allowProgrammableConstraints([immiLabel!, meetLabel!, immimeetIcon!])
+            
+            _ = [
+                immiLabel!.trailingAnchor.constraint(equalTo: window.leadingAnchor)
+                , meetLabel!.leadingAnchor.constraint(equalTo: window.trailingAnchor)
+                , immimeetIcon!.bottomAnchor.constraint(equalTo: window.topAnchor)
+            ].map { $0.isActive = true }
+            
+//            UIView.animateKeyframes(withDuration: 5, delay: 0, options: [UIViewKeyframeAnimationOptions.calculationModeLinear], animations: {
+//                
+//                UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.33) {
+//                    self.immiLabel!.layer.backgroundColor = UIColor.black.cgColor
+//                }
+//                
+//                UIView.addKeyframe(withRelativeStartTime: 0.33, relativeDuration: 0.33) {
+//                    self.immiLabel!.layer.backgroundColor = UIColor.black.cgColor
+//                }
+//                
+//                UIView.addKeyframe(withRelativeStartTime: 0.66, relativeDuration: 0.33) {
+//                    self.immiLabel!.layer.backgroundColor = UIColor.black.cgColor
+//                }
+//            
+//            })
+            
+        }
         
         return true
     }

@@ -16,6 +16,7 @@ class User {
     var location: String
     var origin: String
     var recommendations: [String]
+    var messageHistory: [PMessage] = []
     
     init(
         id: Int,

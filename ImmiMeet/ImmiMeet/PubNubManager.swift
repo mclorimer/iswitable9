@@ -11,8 +11,10 @@ import PubNub
 
 class PubNubManager {
     
+    let chatScreenVC = ChatScreenViewController()
     static let shared = PubNubManager()
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var msgData : [PMessage] = [PMessage]()
     
     private init(){}
     
@@ -21,7 +23,8 @@ class PubNubManager {
         let targetChannel = validClient.channels().last!
         validClient.publish(message, toChannel: targetChannel, compressed: false) { (publishStatus) in
             if !publishStatus.isError {
-                
+                self.msgData.append(PMessage(status: "sent", message: message))
+                self.chatScreenVC.updateMessages()
                 // Message successfully published to specified channel.
             }
             else {
@@ -38,7 +41,10 @@ class PubNubManager {
     }
     
     func receive(_ message: String) {
-        //To
+        let pMsg = PMessage(status: "received", message: message)
+        self.msgData.append(pMsg)
+        
+        chatScreenVC.updateMessages()
     }
     
 }

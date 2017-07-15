@@ -11,12 +11,11 @@ import UIKit
 class DiscoveryViewController: UIViewController, UserReceiver {
 
     var users = [ProxyUser]()
-    
+
     @IBOutlet weak var discoveryTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         discoveryTableView.dataSource = self
         discoveryTableView.delegate = self
     }
@@ -56,5 +55,18 @@ extension DiscoveryViewController: UITableViewDataSource, UITableViewDelegate {
         cell.profileImageView.contentMode = .scaleAspectFit
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let isMIA = indexPath.row % 10 == 6
+        let number: BogusUser = isMIA ? .one : .two
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let profileVC = storyboard.instantiateViewController(withIdentifier: "Profile") as! ProfileViewController
+        let cell = tableView.cellForRow(at: indexPath) as! UserTableViewCell
+        
+        let user = User(with: cell.user, image: cell.profileImageView.image!, number: number)
+        
+        profileVC.initWithUserMIA = (user, isMIA)
+        self.present(profileVC, animated: true, completion: nil)
     }
 }

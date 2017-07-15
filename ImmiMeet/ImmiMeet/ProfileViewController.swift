@@ -23,6 +23,11 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var recTable: UITableView!
     
+    var initWithUserMIA: (user: User, isMIA: Bool)? = nil
+    
+    func initWith(user: User, isMIA: Bool) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,9 +48,32 @@ class ProfileViewController: UIViewController {
         userPic.layer.cornerRadius = 64
         userPic.clipsToBounds = true
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let initWith = initWithUserMIA {
+            self.recs = initWith.user.recommendations
+            userPic.image = initWith.user.profileImage
+            userName.text = initWith.user.user.username
+            userLanguage.text = initWith.isMIA ? "Tamil" : "English"
+            userBlurb.text = initWith.user.blurb
+            self.recTable.reloadData()
+            
+            let doneButton = UIButton(type: .system)
+            doneButton.setTitle("Done", for: .normal)
+            self.view.addSubview(doneButton)
+            
+            doneButton.translatesAutoresizingMaskIntoConstraints = false
+            doneButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 16).isActive = true
+            doneButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16).isActive = true
+            doneButton.addTarget(self, action: #selector(doneButtonPressed), for: .touchUpInside)
+        }
+    }
 
     // add a tableview datasource and delegate (extension?)
-    
+    func doneButtonPressed() {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension ProfileViewController: UITableViewDelegate {

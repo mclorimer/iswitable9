@@ -17,11 +17,16 @@
 		9E71E4A11F19F66E00874C69 /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71E4A01F19F66E00874C69 /* APIRequestManager.swift */; };
 		9E71E4A31F19F7F500874C69 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71E4A21F19F7F500874C69 /* Comment.swift */; };
 		9E71E4A51F1A06D700874C69 /* LanguageCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71E4A41F1A06D700874C69 /* LanguageCodes.swift */; };
+		A749CDB71F1A5C4A00AF65C8 /* PubNubManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749CDB61F1A5C4A00AF65C8 /* PubNubManager.swift */; };
+		A749CDB91F1A5D2000AF65C8 /* ChatScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A749CDB81F1A5D2000AF65C8 /* ChatScreens.storyboard */; };
+		A749CDBB1F1A604F00AF65C8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749CDBA1F1A604F00AF65C8 /* ChatViewController.swift */; };
 		D392646A1F1A1E7A002ED6A0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39264691F1A1E7A002ED6A0 /* ProfileViewController.swift */; };
 		D392646C1F1A2B3C002ED6A0 /* ViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392646B1F1A2B3C002ED6A0 /* ViewHelpers.swift */; };
+		F269C1DE1ECE8BDA6AAF7A0B /* Pods_ImmiMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5AB188864AF0593DEA4EBA /* Pods_ImmiMeet.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F5AB188864AF0593DEA4EBA /* Pods_ImmiMeet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmiMeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D323871F19CC9C0035AEFE /* ImmiMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmiMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D3238A1F19CC9C0035AEFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81D3238F1F19CC9C0035AEFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,8 +39,13 @@
 		9E71E4A01F19F66E00874C69 /* APIRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
 		9E71E4A21F19F7F500874C69 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		9E71E4A41F1A06D700874C69 /* LanguageCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageCodes.swift; sourceTree = "<group>"; };
+		9F274D6F56BEA7533BAEBDAF /* Pods-ImmiMeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmiMeet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImmiMeet/Pods-ImmiMeet.debug.xcconfig"; sourceTree = "<group>"; };
+		A749CDB61F1A5C4A00AF65C8 /* PubNubManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubNubManager.swift; sourceTree = "<group>"; };
+		A749CDB81F1A5D2000AF65C8 /* ChatScreens.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChatScreens.storyboard; sourceTree = "<group>"; };
+		A749CDBA1F1A604F00AF65C8 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		D39264691F1A1E7A002ED6A0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D392646B1F1A2B3C002ED6A0 /* ViewHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelpers.swift; sourceTree = "<group>"; };
+		ED7331878A1769F00FBEDAC6 /* Pods-ImmiMeet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmiMeet.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImmiMeet/Pods-ImmiMeet.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F269C1DE1ECE8BDA6AAF7A0B /* Pods_ImmiMeet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C47A6E85F16D65D15D76453 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F274D6F56BEA7533BAEBDAF /* Pods-ImmiMeet.debug.xcconfig */,
+				ED7331878A1769F00FBEDAC6 /* Pods-ImmiMeet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		75F391129D17A348F8D5EE7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F5AB188864AF0593DEA4EBA /* Pods_ImmiMeet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		81D3237E1F19CC9C0035AEFE = {
 			isa = PBXGroup;
 			children = (
 				81D323891F19CC9C0035AEFE /* ImmiMeet */,
 				81D323881F19CC9C0035AEFE /* Products */,
+				4C47A6E85F16D65D15D76453 /* Pods */,
+				75F391129D17A348F8D5EE7C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,10 +103,13 @@
 				81D323A21F19FC900035AEFE /* UserTableViewCell.swift */,
 				9E71E4A01F19F66E00874C69 /* APIRequestManager.swift */,
 				81D3238A1F19CC9C0035AEFE /* AppDelegate.swift */,
+				A749CDB61F1A5C4A00AF65C8 /* PubNubManager.swift */,
+				A749CDBA1F1A604F00AF65C8 /* ChatViewController.swift */,
 				81D323911F19CC9C0035AEFE /* Assets.xcassets */,
 				9E71E4A21F19F7F500874C69 /* Comment.swift */,
 				81D323961F19CC9C0035AEFE /* Info.plist */,
 				81D323931F19CC9C0035AEFE /* LaunchScreen.storyboard */,
+				A749CDB81F1A5D2000AF65C8 /* ChatScreens.storyboard */,
 				81D3238E1F19CC9C0035AEFE /* Main.storyboard */,
 				9E71E49C1F19ED5400874C69 /* User.swift */,
 				9E71E4A41F1A06D700874C69 /* LanguageCodes.swift */,
@@ -92,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81D323991F19CC9C0035AEFE /* Build configuration list for PBXNativeTarget "ImmiMeet" */;
 			buildPhases = (
+				5F5E227ABF0D059B5582CF15 /* [CP] Check Pods Manifest.lock */,
 				81D323831F19CC9C0035AEFE /* Sources */,
 				81D323841F19CC9C0035AEFE /* Frameworks */,
 				81D323851F19CC9C0035AEFE /* Resources */,
+				1A9F128C559828C74ED300F9 /* [CP] Embed Pods Frameworks */,
+				61C57AB739CA3372A0BD5258 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A749CDB91F1A5D2000AF65C8 /* ChatScreens.storyboard in Resources */,
 				81D323951F19CC9C0035AEFE /* LaunchScreen.storyboard in Resources */,
 				81D323921F19CC9C0035AEFE /* Assets.xcassets in Resources */,
 				81D323901F19CC9C0035AEFE /* Main.storyboard in Resources */,
@@ -153,6 +190,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A9F128C559828C74ED300F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmiMeet/Pods-ImmiMeet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F5E227ABF0D059B5582CF15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		61C57AB739CA3372A0BD5258 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmiMeet/Pods-ImmiMeet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		81D323831F19CC9C0035AEFE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -160,11 +245,13 @@
 			files = (
 				81D323A31F19FC900035AEFE /* UserTableViewCell.swift in Sources */,
 				9E71E4A51F1A06D700874C69 /* LanguageCodes.swift in Sources */,
+				A749CDBB1F1A604F00AF65C8 /* ChatViewController.swift in Sources */,
 				9E71E4A31F19F7F500874C69 /* Comment.swift in Sources */,
 				D392646C1F1A2B3C002ED6A0 /* ViewHelpers.swift in Sources */,
 				9E71E4A11F19F66E00874C69 /* APIRequestManager.swift in Sources */,
 				81D3238B1F19CC9C0035AEFE /* AppDelegate.swift in Sources */,
 				81D3239F1F19F5210035AEFE /* DiscoveryViewController.swift in Sources */,
+				A749CDB71F1A5C4A00AF65C8 /* PubNubManager.swift in Sources */,
 				D392646A1F1A1E7A002ED6A0 /* ProfileViewController.swift in Sources */,
 				9E71E49D1F19ED5400874C69 /* User.swift in Sources */,
 			);
@@ -289,6 +376,7 @@
 		};
 		81D3239A1F19CC9C0035AEFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F274D6F56BEA7533BAEBDAF /* Pods-ImmiMeet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GD7JHZ9557;
@@ -303,6 +391,7 @@
 		};
 		81D3239B1F19CC9C0035AEFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED7331878A1769F00FBEDAC6 /* Pods-ImmiMeet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GD7JHZ9557;

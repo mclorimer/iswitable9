@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    var recs = [String]()
+    
     @IBOutlet weak var userPic: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userOrigin: UILabel!
@@ -26,6 +28,8 @@ class ProfileViewController: UIViewController {
 
         // grab the correct user pic, name, origin, language, blurb, up/down votes from user object
         
+        recTable.dataSource = self
+        recTable.delegate = self
         recTable.register(UITableViewCell.self, forCellReuseIdentifier: "Rec")
         
     }
@@ -42,15 +46,18 @@ class ProfileViewController: UIViewController {
 
     // add a tableview datasource and delegate (extension?)
     
+}
 
-    /*
-    // MARK: - Navigation
+extension ProfileViewController: UITableViewDelegate {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+}
+
+extension ProfileViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 }

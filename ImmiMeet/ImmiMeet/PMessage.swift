@@ -16,4 +16,11 @@ class PMessage {
         self.status = status
         self.message = message
     }
+    
+    convenience init(withDictionary dict : [String: String]) {
+        let status = dict["status"]!
+        let message = dict["message"]!
+        
+        self.init(status: status, message: message)
+    }
 }

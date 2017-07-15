@@ -1,0 +1,32 @@
+ [{"status" : "received",
+  "message" : "Hi, I just moved here from Sri Lanka!"
+  },
+  
+  {"status" : "sent",
+  "message" : "What's that?"
+  },
+
+  {"status" : "received",
+  "message" : "It's a country off of the coast of India. "
+  },
+  
+  {"status" : "sent",
+  "message" : "Why'd you come here?"
+  },
+  
+  {"status" : "received",
+  "message" : "I'm a singer, trying to make it big in America. I was wondering if you knew about any good vegetarian food."
+  },
+  
+  {"status" : "sent",
+  "message" : "Actually, yeah, I'm a vegetarian chef! You should come to my restaurant in Eureka. How long have you been vegetarian"
+  },
+  
+  {"status" : "received",
+  "message" : "Well, I was born Muslim so growing up halal, I eventually just decided that the I couldn't stand the hypocracy of living a Godly life and killing animals just so I could eat them. How about you?"
+  },
+  
+  {"status" : "sent",
+  "message" : "I'm a baptist, and I had the same exact feelings!"
+  },
+]

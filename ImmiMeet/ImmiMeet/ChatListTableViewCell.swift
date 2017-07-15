@@ -11,7 +11,6 @@ import UIKit
 class ChatListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var chatListImageView: UIImageView!
-    
     @IBOutlet weak var chatListLabel: UILabel!
     
     override func awakeFromNib() {
@@ -26,7 +25,6 @@ class ChatListTableViewCell: UITableViewCell {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

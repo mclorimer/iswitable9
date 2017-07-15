@@ -27,6 +27,22 @@ struct DataMessenger {
             print("yall fucked up the json")
         }
     }
+    static func getMessages () -> [PMessage]? {
+        let file = Bundle.main.url(forResource: "conversation", withExtension: "json")!
+        
+        do {
+            let data = try Data(contentsOf: file)
+            let json = try JSONSerialization.jsonObject(with: data, options: [])
+            let arrayOfDictionaries = json as! [[String: String]]
+            let messages = arrayOfDictionaries.map{ PMessage(withDictionary: $0) }
+            
+            return messages
+            
+        } catch {
+            print("yall fucked up the json")
+        }
+        return nil
+    }
 }
 
 protocol UserReceiver {

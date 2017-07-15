@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81B2F0881F1A986E0076E128 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B2F0831F1A986E0076E128 /* ChatListTableViewCell.swift */; };
+		81B2F0891F1A986E0076E128 /* ChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B2F0841F1A986E0076E128 /* ChatScreenViewController.swift */; };
+		81B2F08A1F1A986E0076E128 /* PMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B2F0851F1A986E0076E128 /* PMessage.swift */; };
+		81B2F08B1F1A986E0076E128 /* ReceiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B2F0861F1A986E0076E128 /* ReceiveTableViewCell.swift */; };
+		81B2F08C1F1A986E0076E128 /* SentMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B2F0871F1A986E0076E128 /* SentMessageTableViewCell.swift */; };
+		81B2F08E1F1AA6E70076E128 /* conversation.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B2F08D1F1AA6E70076E128 /* conversation.json */; };
 		81D3238B1F19CC9C0035AEFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D3238A1F19CC9C0035AEFE /* AppDelegate.swift */; };
 		81D323901F19CC9C0035AEFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81D3238E1F19CC9C0035AEFE /* Main.storyboard */; };
 		81D323921F19CC9C0035AEFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81D323911F19CC9C0035AEFE /* Assets.xcassets */; };
@@ -30,6 +36,12 @@
 
 /* Begin PBXFileReference section */
 		1F5AB188864AF0593DEA4EBA /* Pods_ImmiMeet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmiMeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B2F0831F1A986E0076E128 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
+		81B2F0841F1A986E0076E128 /* ChatScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatScreenViewController.swift; sourceTree = "<group>"; };
+		81B2F0851F1A986E0076E128 /* PMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMessage.swift; sourceTree = "<group>"; };
+		81B2F0861F1A986E0076E128 /* ReceiveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveTableViewCell.swift; sourceTree = "<group>"; };
+		81B2F0871F1A986E0076E128 /* SentMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMessageTableViewCell.swift; sourceTree = "<group>"; };
+		81B2F08D1F1AA6E70076E128 /* conversation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = conversation.json; sourceTree = "<group>"; };
 		81D323871F19CC9C0035AEFE /* ImmiMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmiMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D3238A1F19CC9C0035AEFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81D3238F1F19CC9C0035AEFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +118,11 @@
 			children = (
 				D39264691F1A1E7A002ED6A0 /* ProfileViewController.swift */,
 				81D3239E1F19F5210035AEFE /* DiscoveryViewController.swift */,
+				81B2F0831F1A986E0076E128 /* ChatListTableViewCell.swift */,
+				81B2F0841F1A986E0076E128 /* ChatScreenViewController.swift */,
+				81B2F0851F1A986E0076E128 /* PMessage.swift */,
+				81B2F0861F1A986E0076E128 /* ReceiveTableViewCell.swift */,
+				81B2F0871F1A986E0076E128 /* SentMessageTableViewCell.swift */,
 				81D323A21F19FC900035AEFE /* UserTableViewCell.swift */,
 				9E71E4A01F19F66E00874C69 /* APIRequestManager.swift */,
 				81F44A801F1A1A2E00B5AC8D /* DataMessenger.swift */,
@@ -115,6 +132,7 @@
 				81D323911F19CC9C0035AEFE /* Assets.xcassets */,
 				9E71E4A21F19F7F500874C69 /* Comment.swift */,
 				81F44A821F1A1ED300B5AC8D /* data.json */,
+				81B2F08D1F1AA6E70076E128 /* conversation.json */,
 				81F44A841F1A225800B5AC8D /* ProxyUser.swift */,
 				81D323961F19CC9C0035AEFE /* Info.plist */,
 				81D323931F19CC9C0035AEFE /* LaunchScreen.storyboard */,
@@ -190,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B2F08E1F1AA6E70076E128 /* conversation.json in Resources */,
 				A749CDB91F1A5D2000AF65C8 /* ChatScreens.storyboard in Resources */,
 				81D323951F19CC9C0035AEFE /* LaunchScreen.storyboard in Resources */,
 				81D323921F19CC9C0035AEFE /* Assets.xcassets in Resources */,
@@ -262,9 +281,14 @@
 				9E71E4A11F19F66E00874C69 /* APIRequestManager.swift in Sources */,
 				81D3238B1F19CC9C0035AEFE /* AppDelegate.swift in Sources */,
 				81F44A851F1A225800B5AC8D /* ProxyUser.swift in Sources */,
+				81B2F0881F1A986E0076E128 /* ChatListTableViewCell.swift in Sources */,
+				81B2F0891F1A986E0076E128 /* ChatScreenViewController.swift in Sources */,
+				81B2F08C1F1A986E0076E128 /* SentMessageTableViewCell.swift in Sources */,
 				81D3239F1F19F5210035AEFE /* DiscoveryViewController.swift in Sources */,
+				81B2F08B1F1A986E0076E128 /* ReceiveTableViewCell.swift in Sources */,
 				A749CDB71F1A5C4A00AF65C8 /* PubNubManager.swift in Sources */,
 				D392646A1F1A1E7A002ED6A0 /* ProfileViewController.swift in Sources */,
+				81B2F08A1F1A986E0076E128 /* PMessage.swift in Sources */,
 				9E71E49D1F19ED5400874C69 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

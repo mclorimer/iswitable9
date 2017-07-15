@@ -64,28 +64,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             meetLabel!.text = "MEET"
             immimeetIcon!.image = #imageLiteral(resourceName: "immimeetIcon")
             
-            immiLabel!.font = UIFont.systemFont(ofSize: 30)
-            meetLabel!.font = UIFont.systemFont(ofSize: 30)
+            immiLabel!.font = UIFont(name: "Futura-CondensedExtraBold", size: 40)
+            meetLabel!.font = UIFont(name: "Futura-CondensedExtraBold", size: 40)
             
             _ = [
-                immiLabel!.leadingAnchor.constraint(equalTo: window.leadingAnchor)
-                , immiLabel!.widthAnchor.constraint(equalToConstant: 200)
-                , immiLabel!.heightAnchor.constraint(equalToConstant: 200)
+                  immiLabel!.leadingAnchor.constraint(equalTo: window.leadingAnchor)
+                , immiLabel!.centerYAnchor.constraint(equalTo: window.centerYAnchor)
                 , meetLabel!.trailingAnchor.constraint(equalTo: window.trailingAnchor)
-                , meetLabel!.widthAnchor.constraint(equalToConstant: 200)
-                , meetLabel!.heightAnchor.constraint(equalToConstant: 200)
-                , immimeetIcon!.widthAnchor.constraint(equalToConstant: 200)
-                , immimeetIcon!.heightAnchor.constraint(equalToConstant: 200)
-                , immimeetIcon!.topAnchor.constraint(equalTo: window.topAnchor)
+                , meetLabel!.centerYAnchor.constraint(equalTo: immiLabel!.centerYAnchor)
+                , immimeetIcon!.centerXAnchor.constraint(equalTo: window.centerXAnchor)
+                , immimeetIcon!.widthAnchor.constraint(equalToConstant: 100)
+                , immimeetIcon!.heightAnchor.constraint(equalToConstant: 100)
+                , immimeetIcon!.centerYAnchor.constraint(equalTo: window.centerYAnchor)
             ].map { $0.isActive = true }
             
-            UIView.animate(withDuration: 5, animations: {
-                self.immiLabel!.center.x = self.immimeetIcon!.frame.minX
-                self.immiLabel!.center.y = 0
-                self.meetLabel!.center.x = self.immimeetIcon!.frame.maxX
-                self.meetLabel!.center.y = 0
+            UIView.animate(withDuration: 1, animations: {
+                self.immiLabel!.center.x = window.frame.midX
+                self.meetLabel!.center.x = -(window.frame.midX)
                 self.immimeetIcon!.center.y = window.frame.midY
-                self.immimeetIcon!.center.x = 0
             }, completion: nil)
             
         }

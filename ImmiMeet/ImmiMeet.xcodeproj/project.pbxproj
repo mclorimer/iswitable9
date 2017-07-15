@@ -20,6 +20,8 @@
 		9E71E4A11F19F66E00874C69 /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71E4A01F19F66E00874C69 /* APIRequestManager.swift */; };
 		9E71E4A31F19F7F500874C69 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71E4A21F19F7F500874C69 /* Comment.swift */; };
 		9E71E4A51F1A06D700874C69 /* LanguageCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71E4A41F1A06D700874C69 /* LanguageCodes.swift */; };
+		D392646A1F1A1E7A002ED6A0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39264691F1A1E7A002ED6A0 /* ProfileViewController.swift */; };
+		D392646C1F1A2B3C002ED6A0 /* ViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392646B1F1A2B3C002ED6A0 /* ViewHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		9E71E4A01F19F66E00874C69 /* APIRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
 		9E71E4A21F19F7F500874C69 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		9E71E4A41F1A06D700874C69 /* LanguageCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageCodes.swift; sourceTree = "<group>"; };
+		D39264691F1A1E7A002ED6A0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D392646B1F1A2B3C002ED6A0 /* ViewHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		81D323891F19CC9C0035AEFE /* ImmiMeet */ = {
 			isa = PBXGroup;
 			children = (
+				D39264691F1A1E7A002ED6A0 /* ProfileViewController.swift */,
 				81D3239E1F19F5210035AEFE /* DiscoveryViewController.swift */,
 				81D323A21F19FC900035AEFE /* UserTableViewCell.swift */,
 				9E71E4A01F19F66E00874C69 /* APIRequestManager.swift */,
@@ -84,6 +89,7 @@
 				81D3238E1F19CC9C0035AEFE /* Main.storyboard */,
 				9E71E49C1F19ED5400874C69 /* User.swift */,
 				9E71E4A41F1A06D700874C69 /* LanguageCodes.swift */,
+				D392646B1F1A2B3C002ED6A0 /* ViewHelpers.swift */,
 			);
 			path = ImmiMeet;
 			sourceTree = "<group>";
@@ -166,10 +172,12 @@
 				81F44A811F1A1A2E00B5AC8D /* DataMessenger.swift in Sources */,
 				9E71E4A51F1A06D700874C69 /* LanguageCodes.swift in Sources */,
 				9E71E4A31F19F7F500874C69 /* Comment.swift in Sources */,
+				D392646C1F1A2B3C002ED6A0 /* ViewHelpers.swift in Sources */,
 				9E71E4A11F19F66E00874C69 /* APIRequestManager.swift in Sources */,
 				81D3238B1F19CC9C0035AEFE /* AppDelegate.swift in Sources */,
 				81F44A851F1A225800B5AC8D /* ProxyUser.swift in Sources */,
 				81D3239F1F19F5210035AEFE /* DiscoveryViewController.swift in Sources */,
+				D392646A1F1A1E7A002ED6A0 /* ProfileViewController.swift in Sources */,
 				9E71E49D1F19ED5400874C69 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

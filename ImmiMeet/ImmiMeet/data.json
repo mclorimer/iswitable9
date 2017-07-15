@@ -1,602 +1,802 @@
 [
   {
     "id": 1,
-    "name": "David Flowers",
-    "username": "sarah14",
-    "email": "kim38@gmail.com"
+    "name": "Robert Perkins",
+    "username": "petersderek",
+    "email": "yhernandez@hubbard.org",
+    "age": 37,
+    "is_immigrant": 0
   },
   {
     "id": 2,
-    "name": "Anthony Williams",
-    "username": "osbornemelinda",
-    "email": "michael29@terrell.info"
+    "name": "David Lynch",
+    "username": "ozimmerman",
+    "email": "roger44@johnson.com",
+    "age": 57,
+    "is_immigrant": 0
   },
   {
     "id": 3,
-    "name": "Nicholas Parker",
-    "username": "patrickwalker",
-    "email": "smithdonna@gutierrez-wright.com"
+    "name": "Erica Long",
+    "username": "rspencer",
+    "email": "ecantu@yahoo.com",
+    "age": 43,
+    "is_immigrant": 1
   },
   {
     "id": 4,
-    "name": "Vanessa Ryan",
-    "username": "whitneymorris",
-    "email": "joseph16@johnson.com"
+    "name": "Austin Chandler",
+    "username": "changjames",
+    "email": "ysoto@gmail.com",
+    "age": 52,
+    "is_immigrant": 1
   },
   {
     "id": 5,
-    "name": "Timothy Flowers",
-    "username": "amandaharrington",
-    "email": "garciamelissa@hayes.com"
+    "name": "Joyce Fisher",
+    "username": "andrewthomas",
+    "email": "savannahlee@yahoo.com",
+    "age": 39,
+    "is_immigrant": 0
   },
   {
     "id": 6,
-    "name": "Sharon Clayton",
-    "username": "amy00",
-    "email": "vguerra@hotmail.com"
+    "name": "Traci Kaiser",
+    "username": "watsonjoseph",
+    "email": "hmiller@hotmail.com",
+    "age": 53,
+    "is_immigrant": 1
   },
   {
     "id": 7,
-    "name": "Nicole Myers",
-    "username": "zliu",
-    "email": "deanjames@hotmail.com"
+    "name": "Tammy Hughes",
+    "username": "michaelgilbert",
+    "email": "jortiz@hotmail.com",
+    "age": 18,
+    "is_immigrant": 0
   },
   {
     "id": 8,
-    "name": "Terry Moore",
-    "username": "rowlandseth",
-    "email": "ynunez@payne-johnson.com"
+    "name": "Elizabeth Rogers",
+    "username": "wsharp",
+    "email": "jason41@barnes-jones.com",
+    "age": 62,
+    "is_immigrant": 1
   },
   {
     "id": 9,
-    "name": "Heidi Garcia",
-    "username": "kingkimberly",
-    "email": "amandabolton@baker.net"
+    "name": "Brianna Johnson",
+    "username": "allenjohn",
+    "email": "fnavarro@contreras-white.biz",
+    "age": 74,
+    "is_immigrant": 0
   },
   {
     "id": 10,
-    "name": "Christine Garcia",
-    "username": "srice",
-    "email": "daniel61@norris.biz"
+    "name": "Joseph Crane",
+    "username": "ywinters",
+    "email": "bherrera@yahoo.com",
+    "age": 40,
+    "is_immigrant": 0
   },
   {
     "id": 11,
-    "name": "Lisa Sharp",
-    "username": "hbarnes",
-    "email": "suttonbradley@hotmail.com"
+    "name": "Kristine Alvarez PhD",
+    "username": "espinozarichard",
+    "email": "yhudson@brown-howell.org",
+    "age": 54,
+    "is_immigrant": 0
   },
   {
     "id": 12,
-    "name": "Brent Morgan",
-    "username": "jmcdonald",
-    "email": "cartermatthew@gmail.com"
+    "name": "Olivia Hill",
+    "username": "michaelchapman",
+    "email": "cdixon@wade.com",
+    "age": 33,
+    "is_immigrant": 0
   },
   {
     "id": 13,
-    "name": "Steven Jimenez",
-    "username": "rebeccalawson",
-    "email": "sonyaoliver@macdonald.com"
+    "name": "Brenda Richardson",
+    "username": "thomas52",
+    "email": "johnsonmolly@ramirez.biz",
+    "age": 51,
+    "is_immigrant": 0
   },
   {
     "id": 14,
-    "name": "Kathryn Luna",
-    "username": "daughertychristopher",
-    "email": "jonathan74@yahoo.com"
+    "name": "James Sandoval",
+    "username": "ncasey",
+    "email": "sarahstewart@hotmail.com",
+    "age": 56,
+    "is_immigrant": 0
   },
   {
     "id": 15,
-    "name": "Dr. Douglas Baldwin II",
-    "username": "angie34",
-    "email": "tberry@miller.info"
+    "name": "Jeremy Vega",
+    "username": "nancyjackson",
+    "email": "lisa93@barrett-best.com",
+    "age": 30,
+    "is_immigrant": 1
   },
   {
     "id": 16,
-    "name": "Justin Ramos",
-    "username": "nflores",
-    "email": "jasondeleon@hotmail.com"
+    "name": "Cynthia Pitts",
+    "username": "christopher25",
+    "email": "robert41@palmer.com",
+    "age": 43,
+    "is_immigrant": 1
   },
   {
     "id": 17,
-    "name": "Alexander Morgan",
-    "username": "pattersoncathy",
-    "email": "brian23@gmail.com"
+    "name": "Henry Douglas",
+    "username": "bergertimothy",
+    "email": "mgonzalez@willis-rodriguez.com",
+    "age": 51,
+    "is_immigrant": 1
   },
   {
     "id": 18,
-    "name": "Alexander Thompson",
-    "username": "aaronlee",
-    "email": "rsolomon@hotmail.com"
+    "name": "Isabella Rose",
+    "username": "irussell",
+    "email": "marissa77@gmail.com",
+    "age": 48,
+    "is_immigrant": 0
   },
   {
     "id": 19,
-    "name": "Joanna Smith",
-    "username": "deanwalker",
-    "email": "johnsonjoshua@yahoo.com"
+    "name": "Sally Mclean",
+    "username": "wwashington",
+    "email": "katherinemorris@hotmail.com",
+    "age": 75,
+    "is_immigrant": 1
   },
   {
     "id": 20,
-    "name": "Helen Cook",
-    "username": "ferrellandrew",
-    "email": "xknight@wheeler-cook.biz"
+    "name": "Danielle Floyd",
+    "username": "calvinmyers",
+    "email": "jerome36@gonzalez-lane.com",
+    "age": 42,
+    "is_immigrant": 1
   },
   {
     "id": 21,
-    "name": "Michael Olson",
-    "username": "gomezmichael",
-    "email": "angela09@hotmail.com"
+    "name": "Justin Gomez",
+    "username": "wongjeffrey",
+    "email": "alyssa20@gmail.com",
+    "age": 29,
+    "is_immigrant": 0
   },
   {
     "id": 22,
-    "name": "Robert Davidson",
-    "username": "umoss",
-    "email": "williamperry@roberson.com"
+    "name": "Curtis Hernandez",
+    "username": "dcross",
+    "email": "laracynthia@yahoo.com",
+    "age": 66,
+    "is_immigrant": 1
   },
   {
     "id": 23,
-    "name": "Dale Moore",
-    "username": "murphymichelle",
-    "email": "wscott@gmail.com"
+    "name": "John Hunt",
+    "username": "angela11",
+    "email": "samuelrose@hotmail.com",
+    "age": 68,
+    "is_immigrant": 0
   },
   {
     "id": 24,
-    "name": "Timothy Blair",
-    "username": "markchapman",
-    "email": "courtney65@gmail.com"
+    "name": "Brenda Hale",
+    "username": "jburns",
+    "email": "allenmatthew@conrad.org",
+    "age": 42,
+    "is_immigrant": 0
   },
   {
     "id": 25,
-    "name": "Sarah Riggs",
-    "username": "xbennett",
-    "email": "kevin69@roman.com"
+    "name": "Joshua Schmitt",
+    "username": "jamescoffey",
+    "email": "kaylee20@gmail.com",
+    "age": 49,
+    "is_immigrant": 0
   },
   {
     "id": 26,
-    "name": "Jennifer Williams",
-    "username": "annwagner",
-    "email": "stephen41@hotmail.com"
+    "name": "James Smith",
+    "username": "hwest",
+    "email": "cbrown@shaw.com",
+    "age": 36,
+    "is_immigrant": 1
   },
   {
     "id": 27,
-    "name": "Dawn Jones",
-    "username": "jlam",
-    "email": "lwright@yahoo.com"
+    "name": "Lisa Simpson",
+    "username": "lisa14",
+    "email": "lambertjoshua@green.com",
+    "age": 28,
+    "is_immigrant": 1
   },
   {
     "id": 28,
-    "name": "Andrew Lopez",
-    "username": "monroejohn",
-    "email": "laura17@ryan.com"
+    "name": "Steven Schultz",
+    "username": "aprilmitchell",
+    "email": "lindsey11@hotmail.com",
+    "age": 54,
+    "is_immigrant": 1
   },
   {
     "id": 29,
-    "name": "Edward Walsh",
-    "username": "katelyn94",
-    "email": "davisjoan@roberts.com"
+    "name": "Kara English",
+    "username": "mnolan",
+    "email": "lynnortiz@carpenter.com",
+    "age": 57,
+    "is_immigrant": 0
   },
   {
     "id": 30,
-    "name": "Robert Flowers",
-    "username": "ryan37",
-    "email": "williamsamber@hotmail.com"
+    "name": "Dana Hartman",
+    "username": "melissa67",
+    "email": "matthew62@gmail.com",
+    "age": 70,
+    "is_immigrant": 1
   },
   {
     "id": 31,
-    "name": "Alex Jackson",
-    "username": "rojaspaula",
-    "email": "jenniferweaver@ward.com"
+    "name": "Sheila Tucker",
+    "username": "alan54",
+    "email": "guerrerotara@hotmail.com",
+    "age": 51,
+    "is_immigrant": 1
   },
   {
     "id": 32,
-    "name": "Todd King",
-    "username": "russellduncan",
-    "email": "mtorres@yahoo.com"
+    "name": "Edward Johnston",
+    "username": "deanshawn",
+    "email": "stephanie14@wolf-proctor.net",
+    "age": 55,
+    "is_immigrant": 1
   },
   {
     "id": 33,
-    "name": "William Saunders",
-    "username": "stephanie52",
-    "email": "brownkevin@yahoo.com"
+    "name": "Marcus Cole",
+    "username": "mannsydney",
+    "email": "ricky73@kemp.com",
+    "age": 28,
+    "is_immigrant": 0
   },
   {
     "id": 34,
-    "name": "Larry Robertson",
-    "username": "yolandabrown",
-    "email": "michaelmorrow@boyle.biz"
+    "name": "Jacob Meyers",
+    "username": "mitchellgloria",
+    "email": "imyers@gmail.com",
+    "age": 21,
+    "is_immigrant": 1
   },
   {
     "id": 35,
-    "name": "Ryan Norris",
-    "username": "collinsjennifer",
-    "email": "riceisaac@frost-barker.com"
+    "name": "Amanda Kelley",
+    "username": "richardsongary",
+    "email": "mitchell50@yahoo.com",
+    "age": 47,
+    "is_immigrant": 1
   },
   {
     "id": 36,
-    "name": "Natalie Patterson",
-    "username": "brian20",
-    "email": "fmatthews@hotmail.com"
+    "name": "Alyssa Newton",
+    "username": "christine84",
+    "email": "jandrews@jones-johnson.com",
+    "age": 59,
+    "is_immigrant": 0
   },
   {
     "id": 37,
-    "name": "Mary Doyle",
-    "username": "weberbrandon",
-    "email": "ryanbarajas@hotmail.com"
+    "name": "Daniel Collins",
+    "username": "jessica07",
+    "email": "adrienne94@gmail.com",
+    "age": 53,
+    "is_immigrant": 0
   },
   {
     "id": 38,
-    "name": "Renee Harris",
-    "username": "mckenziedylan",
-    "email": "sydneytownsend@keller.com"
+    "name": "Joseph Ellison",
+    "username": "christina60",
+    "email": "fhill@chung.info",
+    "age": 50,
+    "is_immigrant": 0
   },
   {
     "id": 39,
-    "name": "Jennifer Brown",
-    "username": "stevenslucas",
-    "email": "robin35@yahoo.com"
+    "name": "Chad Hall",
+    "username": "mdrake",
+    "email": "adam38@yahoo.com",
+    "age": 37,
+    "is_immigrant": 0
   },
   {
     "id": 40,
-    "name": "Joseph Curry",
-    "username": "hallernest",
-    "email": "jeffreyware@gmail.com"
+    "name": "Christopher Graham",
+    "username": "deborahwright",
+    "email": "jeff90@gmail.com",
+    "age": 41,
+    "is_immigrant": 0
   },
   {
     "id": 41,
-    "name": "Joshua Moore",
-    "username": "brian20",
-    "email": "muellerrandy@scott-chandler.org"
+    "name": "Steven Roberts",
+    "username": "oconnellcasey",
+    "email": "catherinejackson@hotmail.com",
+    "age": 23,
+    "is_immigrant": 0
   },
   {
     "id": 42,
-    "name": "Justin Wood",
-    "username": "amandajones",
-    "email": "uthomas@rogers.org"
+    "name": "Andrea Gomez",
+    "username": "sullivanjeremy",
+    "email": "lmclean@evans.com",
+    "age": 20,
+    "is_immigrant": 0
   },
   {
     "id": 43,
-    "name": "Maria Murphy",
-    "username": "wbailey",
-    "email": "richardsexton@yahoo.com"
+    "name": "Rebecca Stone",
+    "username": "melissaturner",
+    "email": "tracy78@gmail.com",
+    "age": 62,
+    "is_immigrant": 0
   },
   {
     "id": 44,
-    "name": "Barry Morton",
-    "username": "sydneygregory",
-    "email": "osnow@williams.biz"
+    "name": "Daniel Cole",
+    "username": "michael82",
+    "email": "callahanjesse@hotmail.com",
+    "age": 25,
+    "is_immigrant": 0
   },
   {
     "id": 45,
-    "name": "John Hughes",
-    "username": "mitchellhector",
-    "email": "staceywagner@gmail.com"
+    "name": "Carolyn Lawrence",
+    "username": "shawnjohnson",
+    "email": "annneal@cox.com",
+    "age": 61,
+    "is_immigrant": 1
   },
   {
     "id": 46,
-    "name": "Stephanie Flynn",
-    "username": "leonardkelli",
-    "email": "vicki97@benton.com"
+    "name": "Rachel Bridges",
+    "username": "zsalinas",
+    "email": "alyssa00@hotmail.com",
+    "age": 26,
+    "is_immigrant": 1
   },
   {
     "id": 47,
-    "name": "Lynn Phillips",
-    "username": "martinezandrew",
-    "email": "christophermcdaniel@johnson.net"
+    "name": "Edward Cooper",
+    "username": "douglas04",
+    "email": "wileydennis@yahoo.com",
+    "age": 36,
+    "is_immigrant": 1
   },
   {
     "id": 48,
-    "name": "John Melendez",
-    "username": "apaul",
-    "email": "gpennington@wilson.com"
+    "name": "Jeffrey Wood",
+    "username": "hjackson",
+    "email": "langjoanne@gordon.info",
+    "age": 42,
+    "is_immigrant": 1
   },
   {
     "id": 49,
-    "name": "Rhonda Johnson",
-    "username": "kyletorres",
-    "email": "williamevans@yahoo.com"
+    "name": "Christina Villegas",
+    "username": "walterskarl",
+    "email": "gwendolyn84@yahoo.com",
+    "age": 65,
+    "is_immigrant": 1
   },
   {
     "id": 50,
-    "name": "Derrick Rivera",
-    "username": "timothy66",
-    "email": "nicole68@yahoo.com"
+    "name": "Daniel Hill",
+    "username": "anthonymartin",
+    "email": "debra84@mccoy.biz",
+    "age": 62,
+    "is_immigrant": 1
   },
   {
     "id": 51,
-    "name": "Cathy Simon",
-    "username": "brandon37",
-    "email": "josephmitchell@yahoo.com"
+    "name": "Alexandra Booth",
+    "username": "coopererin",
+    "email": "colleen97@hotmail.com",
+    "age": 30,
+    "is_immigrant": 0
   },
   {
     "id": 52,
-    "name": "Tina Summers",
-    "username": "joneslindsey",
-    "email": "robertrhodes@yahoo.com"
+    "name": "Lisa Christensen",
+    "username": "gbrown",
+    "email": "campbellnathan@hotmail.com",
+    "age": 18,
+    "is_immigrant": 1
   },
   {
     "id": 53,
-    "name": "Arthur Nichols",
-    "username": "brandi32",
-    "email": "olivia22@gmail.com"
+    "name": "Michelle Blevins",
+    "username": "angela42",
+    "email": "kanderson@clark-parker.com",
+    "age": 54,
+    "is_immigrant": 0
   },
   {
     "id": 54,
-    "name": "Robert Williams",
-    "username": "williamsvalerie",
-    "email": "stanleyreyes@kerr.org"
+    "name": "Kyle Johnson",
+    "username": "melissamurphy",
+    "email": "pearsonjoseph@keith.com",
+    "age": 35,
+    "is_immigrant": 1
   },
   {
     "id": 55,
-    "name": "Paul Davis",
-    "username": "cordovakelly",
-    "email": "scott27@hotmail.com"
+    "name": "Tyler Davis",
+    "username": "desireevillarreal",
+    "email": "jasonmiller@schroeder.org",
+    "age": 22,
+    "is_immigrant": 0
   },
   {
     "id": 56,
-    "name": "Alexandra Allen",
-    "username": "kpatel",
-    "email": "hillalison@chapman.com"
+    "name": "Richard Richmond",
+    "username": "matthewcunningham",
+    "email": "parkermikayla@roberts.org",
+    "age": 36,
+    "is_immigrant": 1
   },
   {
     "id": 57,
-    "name": "Sheila Davis",
-    "username": "brianmanning",
-    "email": "stonejustin@hotmail.com"
+    "name": "Rickey Coleman",
+    "username": "nathanielandrews",
+    "email": "mosstheresa@gmail.com",
+    "age": 22,
+    "is_immigrant": 0
   },
   {
     "id": 58,
-    "name": "Jose Norman",
-    "username": "mrivera",
-    "email": "welchjonathan@scott.biz"
+    "name": "Rhonda Petersen DDS",
+    "username": "paul97",
+    "email": "thomas90@vang.info",
+    "age": 21,
+    "is_immigrant": 0
   },
   {
     "id": 59,
-    "name": "Vincent Christensen",
-    "username": "melissamartinez",
-    "email": "wilkinsonmichael@gmail.com"
+    "name": "Terrance Curry",
+    "username": "vickimassey",
+    "email": "lawrence17@gmail.com",
+    "age": 31,
+    "is_immigrant": 1
   },
   {
     "id": 60,
-    "name": "Ann Ross MD",
-    "username": "douglasjeffrey",
-    "email": "lisareid@yahoo.com"
+    "name": "Sara Smith",
+    "username": "daniellemitchell",
+    "email": "andrew42@meyers.com",
+    "age": 46,
+    "is_immigrant": 0
   },
   {
     "id": 61,
-    "name": "Alyssa Shah",
-    "username": "jamesward",
-    "email": "ujackson@dunn.com"
+    "name": "Ivan Martin",
+    "username": "collinskevin",
+    "email": "pacejulie@hotmail.com",
+    "age": 20,
+    "is_immigrant": 0
   },
   {
     "id": 62,
-    "name": "Sandra Cruz",
-    "username": "deanna28",
-    "email": "gscott@yahoo.com"
+    "name": "William Ward",
+    "username": "ksaunders",
+    "email": "jasonsims@yahoo.com",
+    "age": 63,
+    "is_immigrant": 1
   },
   {
     "id": 63,
-    "name": "Douglas Rice",
-    "username": "freemanthomas",
-    "email": "psimmons@hotmail.com"
+    "name": "Robert Sharp",
+    "username": "nathanielyoung",
+    "email": "austin03@simpson.biz",
+    "age": 74,
+    "is_immigrant": 1
   },
   {
     "id": 64,
-    "name": "Jeremy Murphy",
-    "username": "gilmorecassandra",
-    "email": "bknight@hotmail.com"
+    "name": "John Hobbs",
+    "username": "robert96",
+    "email": "ghunt@gmail.com",
+    "age": 74,
+    "is_immigrant": 1
   },
   {
     "id": 65,
-    "name": "Matthew Kim",
-    "username": "calhounoscar",
-    "email": "pjones@rodriguez-peterson.com"
+    "name": "Dale Murphy",
+    "username": "dawnmiller",
+    "email": "epadilla@gmail.com",
+    "age": 29,
+    "is_immigrant": 0
   },
   {
     "id": 66,
-    "name": "Candace Garcia",
-    "username": "smithbrittany",
-    "email": "jasonmason@hotmail.com"
+    "name": "Steven Jordan DDS",
+    "username": "langmichael",
+    "email": "conleymonica@hotmail.com",
+    "age": 59,
+    "is_immigrant": 0
   },
   {
     "id": 67,
-    "name": "Tanya Martin",
-    "username": "walkergregory",
-    "email": "carrieclark@davila.com"
+    "name": "Taylor Ramos",
+    "username": "kskinner",
+    "email": "fpowell@gmail.com",
+    "age": 41,
+    "is_immigrant": 0
   },
   {
     "id": 68,
-    "name": "Christopher Foster",
-    "username": "jonesjodi",
-    "email": "ijohnson@mclaughlin-thompson.com"
+    "name": "Julie Christian",
+    "username": "uevans",
+    "email": "susan95@hotmail.com",
+    "age": 51,
+    "is_immigrant": 1
   },
   {
     "id": 69,
-    "name": "Ebony Dickerson",
-    "username": "kwilson",
-    "email": "vgarcia@gmail.com"
+    "name": "Steven Snyder",
+    "username": "xcollins",
+    "email": "hjames@gmail.com",
+    "age": 69,
+    "is_immigrant": 1
   },
   {
     "id": 70,
-    "name": "Christopher Guerrero",
-    "username": "rle",
-    "email": "tanner06@gmail.com"
+    "name": "Allison Hale",
+    "username": "brucemartin",
+    "email": "alyssasmith@hotmail.com",
+    "age": 42,
+    "is_immigrant": 1
   },
   {
     "id": 71,
-    "name": "Joel Gibson",
-    "username": "michelle41",
-    "email": "lisa86@kennedy-allen.net"
+    "name": "Laurie Adams",
+    "username": "ugallegos",
+    "email": "carpenterchristopher@baxter.com",
+    "age": 56,
+    "is_immigrant": 1
   },
   {
     "id": 72,
-    "name": "Amanda Navarro",
-    "username": "jimenezsierra",
-    "email": "alyssa64@gmail.com"
+    "name": "Lori Hines",
+    "username": "jeffreymendez",
+    "email": "jennifermarshall@yahoo.com",
+    "age": 71,
+    "is_immigrant": 0
   },
   {
     "id": 73,
-    "name": "Scott Marshall",
-    "username": "stacyyu",
-    "email": "kimberlygordon@smith.info"
+    "name": "Bradley Morales",
+    "username": "debbiemoore",
+    "email": "juliarandall@yahoo.com",
+    "age": 35,
+    "is_immigrant": 1
   },
   {
     "id": 74,
-    "name": "Chris Doyle",
-    "username": "michael57",
-    "email": "susanglover@hotmail.com"
+    "name": "Sheri Walters",
+    "username": "rmcintyre",
+    "email": "watsonkyle@coleman.biz",
+    "age": 65,
+    "is_immigrant": 1
   },
   {
     "id": 75,
-    "name": "Matthew Stewart",
-    "username": "alicia29",
-    "email": "leemorris@stevens-bryant.biz"
+    "name": "Gary Lee",
+    "username": "scottannette",
+    "email": "justinrojas@fletcher.com",
+    "age": 75,
+    "is_immigrant": 0
   },
   {
     "id": 76,
-    "name": "Connor Adams",
-    "username": "michaelsavage",
-    "email": "muellerkatie@ali-ramos.net"
+    "name": "Ronald Crawford",
+    "username": "shelby05",
+    "email": "awarren@gomez.org",
+    "age": 50,
+    "is_immigrant": 0
   },
   {
     "id": 77,
-    "name": "Kevin Davis",
-    "username": "millsjacob",
-    "email": "lle@jones.net"
+    "name": "Eric Reid",
+    "username": "gdavis",
+    "email": "penalisa@yahoo.com",
+    "age": 38,
+    "is_immigrant": 0
   },
   {
     "id": 78,
-    "name": "Katherine Swanson",
-    "username": "ikeller",
-    "email": "angelbarnett@hotmail.com"
+    "name": "Robin Bradley",
+    "username": "aporter",
+    "email": "mackenzie66@gmail.com",
+    "age": 70,
+    "is_immigrant": 0
   },
   {
     "id": 79,
-    "name": "Brian Jones",
-    "username": "odomvanessa",
-    "email": "michael60@hotmail.com"
+    "name": "Carla Howell",
+    "username": "xjohnson",
+    "email": "rebeccacruz@yahoo.com",
+    "age": 74,
+    "is_immigrant": 1
   },
   {
     "id": 80,
-    "name": "Dr. Jo Trevino",
-    "username": "pmooney",
-    "email": "troyrodriguez@reed.com"
+    "name": "Mary Nelson",
+    "username": "terryrachel",
+    "email": "isaacfernandez@hotmail.com",
+    "age": 51,
+    "is_immigrant": 1
   },
   {
     "id": 81,
-    "name": "Dalton Lambert",
-    "username": "william74",
-    "email": "yyoung@yahoo.com"
+    "name": "Grace Ross",
+    "username": "xolson",
+    "email": "rebecca68@yahoo.com",
+    "age": 18,
+    "is_immigrant": 1
   },
   {
     "id": 82,
-    "name": "Lori Holland",
-    "username": "mrodriguez",
-    "email": "daltonpatricia@beasley.com"
+    "name": "Nicole Gallagher",
+    "username": "hmanning",
+    "email": "jordanfisher@jones.com",
+    "age": 63,
+    "is_immigrant": 0
   },
   {
     "id": 83,
-    "name": "Cynthia Martinez",
-    "username": "johnswanson",
-    "email": "kevingonzales@hotmail.com"
+    "name": "Felicia Garcia",
+    "username": "warebrenda",
+    "email": "sclark@hotmail.com",
+    "age": 70,
+    "is_immigrant": 0
   },
   {
     "id": 84,
-    "name": "Alexis Montoya",
-    "username": "davidthornton",
-    "email": "rayjessica@gmail.com"
+    "name": "Christina Brown",
+    "username": "jason28",
+    "email": "danaparker@yahoo.com",
+    "age": 21,
+    "is_immigrant": 1
   },
   {
     "id": 85,
-    "name": "Melissa Arnold",
-    "username": "jschroeder",
-    "email": "lewisdaniel@gmail.com"
+    "name": "Benjamin Harris",
+    "username": "david98",
+    "email": "timothy35@harris-george.com",
+    "age": 75,
+    "is_immigrant": 0
   },
   {
     "id": 86,
-    "name": "Alicia Smith",
-    "username": "linda72",
-    "email": "vmullen@hotmail.com"
+    "name": "Taylor Thomas",
+    "username": "desireeadkins",
+    "email": "kcunningham@montoya.net",
+    "age": 73,
+    "is_immigrant": 1
   },
   {
     "id": 87,
-    "name": "Olivia Singleton",
-    "username": "mariawilliams",
-    "email": "laurenhodges@liu.com"
+    "name": "Nancy Reyes",
+    "username": "brooke39",
+    "email": "perezjustin@hotmail.com",
+    "age": 75,
+    "is_immigrant": 0
   },
   {
     "id": 88,
-    "name": "Michael Watson",
-    "username": "popelisa",
-    "email": "jhardy@gmail.com"
+    "name": "James Morris",
+    "username": "ccook",
+    "email": "matthew70@yahoo.com",
+    "age": 29,
+    "is_immigrant": 1
   },
   {
     "id": 89,
-    "name": "Melissa Freeman",
-    "username": "grobbins",
-    "email": "morenorichard@smith-carter.com"
+    "name": "Jerry Mitchell",
+    "username": "morganfuller",
+    "email": "carlos95@davis.com",
+    "age": 44,
+    "is_immigrant": 1
   },
   {
     "id": 90,
-    "name": "Jenny Sanchez",
-    "username": "zfry",
-    "email": "wrightsara@shaffer.net"
+    "name": "Steven Chandler",
+    "username": "acastillo",
+    "email": "jarvismary@martin-arellano.net",
+    "age": 37,
+    "is_immigrant": 1
   },
   {
     "id": 91,
-    "name": "Mr. Kevin Herrera Jr.",
-    "username": "pottertammy",
-    "email": "myersdonald@moore.com"
+    "name": "Lori Ortiz",
+    "username": "blamb",
+    "email": "alejandrastrong@white.biz",
+    "age": 39,
+    "is_immigrant": 1
   },
   {
     "id": 92,
-    "name": "Alexander Reyes",
-    "username": "aharper",
-    "email": "michelle35@yahoo.com"
+    "name": "Jeffery Hughes",
+    "username": "tiffany04",
+    "email": "jbarrett@yahoo.com",
+    "age": 46,
+    "is_immigrant": 1
   },
   {
     "id": 93,
-    "name": "Calvin Smith",
-    "username": "leethomas",
-    "email": "tdavis@smith-freeman.com"
+    "name": "Paul Parks Jr.",
+    "username": "barryheather",
+    "email": "adamslauren@ward.com",
+    "age": 33,
+    "is_immigrant": 1
   },
   {
     "id": 94,
-    "name": "Anthony Murphy",
-    "username": "allisonvaldez",
-    "email": "martinezrachel@hotmail.com"
+    "name": "Christopher Martin",
+    "username": "douglaspollard",
+    "email": "sloankelly@hotmail.com",
+    "age": 54,
+    "is_immigrant": 1
   },
   {
     "id": 95,
-    "name": "Crystal Haney",
-    "username": "qjohnson",
-    "email": "jeffreymunoz@harper.com"
+    "name": "Benjamin Miller",
+    "username": "craig49",
+    "email": "lauramorgan@nelson-walker.com",
+    "age": 61,
+    "is_immigrant": 1
   },
   {
     "id": 96,
-    "name": "Aaron Frazier",
-    "username": "jennifer73",
-    "email": "mary17@hotmail.com"
+    "name": "Kimberly Gregory",
+    "username": "nathanjohnson",
+    "email": "whernandez@hernandez-dawson.com",
+    "age": 35,
+    "is_immigrant": 0
   },
   {
     "id": 97,
-    "name": "Martin Carter",
-    "username": "robertmontgomery",
-    "email": "zharding@yahoo.com"
+    "name": "Krista Walton",
+    "username": "hamiltoncrystal",
+    "email": "dwhite@smith-williams.com",
+    "age": 36,
+    "is_immigrant": 0
   },
   {
     "id": 98,
-    "name": "Barry Franco",
-    "username": "andersoncaleb",
-    "email": "lisaterry@gmail.com"
+    "name": "Philip Smith",
+    "username": "gregory62",
+    "email": "nwelch@munoz-shields.com",
+    "age": 50,
+    "is_immigrant": 1
   },
   {
     "id": 99,
-    "name": "Mark Bradford",
-    "username": "cfields",
-    "email": "tmiller@garner-bennett.com"
+    "name": "Heather Clark",
+    "username": "matthew33",
+    "email": "cgomez@lee-peterson.info",
+    "age": 75,
+    "is_immigrant": 0
   },
   {
     "id": 100,
-    "name": "Patricia Castro",
-    "username": "anna81",
-    "email": "julian91@hotmail.com"
+    "name": "Sarah Gardner",
+    "username": "jimmybishop",
+    "email": "samuelholder@roberts-peterson.info",
+    "age": 60,
+    "is_immigrant": 0
   }
 ]

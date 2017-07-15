@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
     var pubnubManager = PubNubManager()
     var window: UIWindow?
 
+    var immiLabel: UILabel?
+    var meetLabel: UILabel?
+    var immimeetIcon: UIImageView?
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 //        BInterfaceManager.shared().a = BDefaultInterfaceAdapter.init()
@@ -43,13 +47,80 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
         self.client.subscribeToChannels(["ImmiMeetChannel"], withPresence: true)
         
         window = UIWindow(frame: UIScreen.main.bounds)
+        
         let tabBarController = UITabBarController()
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainVC = mainStoryboard.instantiateInitialViewController()
-        tabBarController.setViewControllers([mainVC!], animated: true)
+        let profileVC = mainStoryboard.instantiateViewController(withIdentifier: "Profile")
+        let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "Discovery")
+        let chatVC = mainStoryboard.instantiateViewController(withIdentifier: "Chat")
+        
+        tabBarController.setViewControllers([profileVC, mainVC, chatVC], animated: true)
+        
+        let tabBar = tabBarController.tabBar
+        
+        let tabProfile = tabBar.items![0]
+        tabProfile.title = "Profile"
+        tabProfile.image = #imageLiteral(resourceName: "profileIcon")
+        
+        let tabDiscovery = tabBar.items![1]
+        tabDiscovery.title = "Discovery"
+        tabDiscovery.image = #imageLiteral(resourceName: "discoveryIcon")
+        
+        let tabChat = tabBar.items![2]
+        tabChat.title = "Chat"
+        tabChat.image = #imageLiteral(resourceName: "chatIcon")
+        
         window?.rootViewController = tabBarController
         
         window?.makeKeyAndVisible()
+        
+        // animation for splash
+        
+        if let window = self.window {
+            immiLabel = UILabel()
+            meetLabel = UILabel()
+            immimeetIcon = UIImageView()
+            
+            window.addSubview(immiLabel!)
+            window.addSubview(meetLabel!)
+            window.addSubview(immimeetIcon!)
+            
+            allowProgrammableConstraints([immiLabel!, meetLabel!, immimeetIcon!])
+            
+            immiLabel!.text = "IMMI"
+            meetLabel!.text = "MEET"
+            immimeetIcon!.image = #imageLiteral(resourceName: "immimeetIcon")
+            
+            immiLabel!.textColor = .blue
+            meetLabel!.textColor = .blue
+            
+            immiLabel!.font = UIFont(name: "Futura-CondensedExtraBold", size: 60)
+            meetLabel!.font = UIFont(name: "Futura-CondensedExtraBold", size: 60)
+            
+            _ = [
+                  immiLabel!.leadingAnchor.constraint(equalTo: window.leadingAnchor)
+                , immiLabel!.centerYAnchor.constraint(equalTo: window.centerYAnchor)
+                , meetLabel!.trailingAnchor.constraint(equalTo: window.trailingAnchor)
+                , meetLabel!.centerYAnchor.constraint(equalTo: immiLabel!.centerYAnchor)
+                , immimeetIcon!.centerXAnchor.constraint(equalTo: window.centerXAnchor)
+                , immimeetIcon!.widthAnchor.constraint(equalToConstant: 100)
+                , immimeetIcon!.heightAnchor.constraint(equalToConstant: 100)
+                , immimeetIcon!.centerYAnchor.constraint(equalTo: window.centerYAnchor)
+            ].map { $0.isActive = true }
+            
+            UIView.animate(withDuration: 1, animations: {
+                self.immiLabel!.center.x = window.frame.midX
+                self.meetLabel!.center.x = -(window.frame.midX)
+                self.immimeetIcon!.center.y = window.frame.midY
+            }, completion: { finish in
+                UIView.animate(withDuration: 1.5, animations: {
+                self.immiLabel!.alpha = 0
+                self.meetLabel!.alpha = 0
+                self.immimeetIcon!.alpha = 0
+                })
+            })
+            
+        }
         
         return true
     }

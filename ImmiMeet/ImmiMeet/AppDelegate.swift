@@ -8,47 +8,48 @@
 
 import UIKit
 import PubNub
-import ChatSDKCore
-import ChatSDKUI
-import ChatSDKCoreData
-import ChatSDKFirebaseAdapter
+//import ChatSDKCore
+//import ChatSDKUI
+//import ChatSDKCoreData
+//import ChatSDKFirebaseAdapter
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
 
     // Stores reference on PubNub client to make sure what it won't be released.
     var client: PubNub!
+    var pubnubManager = PubNubManager()
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        BInterfaceManager.shared().a = BDefaultInterfaceAdapter.init()
-        BNetworkManager.shared().a = BFirebaseNetworkAdapter.init()
-        BStorageManager.shared().a = BCoreDataManager.init()
-        
-        let loginViewController = BAppTabBarController.init(nibName: nil, bundle: nil)
-        BNetworkManager.shared().a.auth().setChallenge(BLoginViewController.init(nibName: nil, bundle: nil));
-        
-        self.window = UIWindow.init(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = loginViewController;
-        self.window?.makeKeyAndVisible();
-        
-//        // Initialize and configure PubNub client instance
-//        let configuration = PNConfiguration(publishKey: "pub-c-74172a25-b815-4257-b661-9497fe0c5794", subscribeKey: "sub-c-bc5063a4-692f-11e7-9aa9-02ee2ddab7fe")
-//        self.client = PubNub.clientWithConfiguration(configuration)
-//        self.client.addListener(self)
+//        BInterfaceManager.shared().a = BDefaultInterfaceAdapter.init()
+//        BNetworkManager.shared().a = BFirebaseNetworkAdapter.init()
+//        BStorageManager.shared().a = BCoreDataManager.init()
 //        
-//        // Subscribe to demo channel with presence observation
-//        self.client.subscribeToChannels(["ImmiMeetChannel"], withPresence: true)
+//        let loginViewController = BAppTabBarController.init(nibName: nil, bundle: nil)
+//        BNetworkManager.shared().a.auth().setChallenge(BLoginViewController.init(nibName: nil, bundle: nil));
 //        
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        let tabBarController = UITabBarController()
-//        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let mainVC = mainStoryboard.instantiateInitialViewController()
-//        tabBarController.setViewControllers([mainVC!], animated: true)
-//        window?.rootViewController = tabBarController
-//        
-//        window?.makeKeyAndVisible()
+//        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+//        self.window?.rootViewController = loginViewController;
+//        self.window?.makeKeyAndVisible();
+        
+        // Initialize and configure PubNub client instance
+        let configuration = PNConfiguration(publishKey: "pub-c-74172a25-b815-4257-b661-9497fe0c5794", subscribeKey: "sub-c-bc5063a4-692f-11e7-9aa9-02ee2ddab7fe")
+        self.client = PubNub.clientWithConfiguration(configuration)
+        self.client.addListener(self)
+        
+        // Subscribe to demo channel with presence observation
+        self.client.subscribeToChannels(["ImmiMeetChannel"], withPresence: true)
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let tabBarController = UITabBarController()
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainVC = mainStoryboard.instantiateInitialViewController()
+        tabBarController.setViewControllers([mainVC!], animated: true)
+        window?.rootViewController = tabBarController
+        
+        window?.makeKeyAndVisible()
         
         return true
     }
@@ -88,6 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
             // Message has been received on channel stored in message.data.channel.
         }
         
+        pubnubManager.shared.receive(String(describing: message.data.message!))
         print("Received message: \(String(describing: message.data.message!)) on channel \(message.data.channel) " +
             "at \(message.data.timetoken)")
     }
@@ -106,26 +108,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
                     // This is expected for a subscribe, this means there is no error or issue whatsoever.
                     
                     // Select last object from list of channels and send message to it.
-                    let targetChannel = client.channels().last!
-                    client.publish("Hello from the PubNub Swift SDK", toChannel: targetChannel,
-                                   compressed: false, withCompletion: { (publishStatus) -> Void in
-                                    
-                                    if !publishStatus.isError {
-                                        
-                                        // Message successfully published to specified channel.
-                                    }
-                                    else {
-                                        
-                                        /**
-                                         Handle message publish error. Check 'category' property to find out
-                                         possible reason because of which request did fail.
-                                         Review 'errorData' property (which has PNErrorData data type) of status
-                                         object to get additional information about issue.
-                                         
-                                         Request can be resent using: publishStatus.retry()
-                                         */
-                                    }
-                    })
                 }
                 else {
                     

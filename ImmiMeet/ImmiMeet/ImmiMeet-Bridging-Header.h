@@ -14,4 +14,4 @@
 
 #endif /* ImmiMeet_Bridging_Header_h */
 
-//#import <ChatSDKFirebaseAdapter/ChatFirebaseAdapter.h>
+//#import "BFirebaseNetworkAdapter.h"

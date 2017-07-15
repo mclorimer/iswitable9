@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,13 +9,14 @@
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Chat View Controller-->
         <scene sceneID="uVY-wa-rnM">
             <objects>
-                <viewController id="ypv-ev-nGG" customClass="ChatViewController" customModule="ImmiMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Chat" id="ypv-ev-nGG" customClass="ChatViewController" customModule="ImmiMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tda-R2-Upe"/>
                         <viewControllerLayoutGuide type="bottom" id="vAh-Ju-POL"/>
@@ -35,14 +36,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="172.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3of-Tq-sPD">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7" translatesAutoresizingMaskIntoConstraints="NO" id="3of-Tq-sPD">
                                                     <rect key="frame" x="16" y="16" width="140" height="140"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="140" id="5VS-TQ-BZ3"/>
                                                         <constraint firstAttribute="height" constant="140" id="yZ9-RZ-N8N"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpn-mp-8dW">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="michaelgilbert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpn-mp-8dW">
                                                     <rect key="frame" x="164" y="16" width="195" height="140"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -91,7 +92,7 @@
         <!--Chat Screen View Controller-->
         <scene sceneID="sGt-hY-pDT">
             <objects>
-                <viewController id="qZ0-Rc-Ulx" customClass="ChatScreenViewController" customModule="ImmiMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatStuff" id="qZ0-Rc-Ulx" customClass="ChatScreenViewController" customModule="ImmiMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mto-bk-FpI"/>
                         <viewControllerLayoutGuide type="bottom" id="C5E-ao-BQP"/>
@@ -117,14 +118,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBi-XN-389">
-                                                    <rect key="frame" x="319" y="21" width="42" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBi-XN-389">
+                                                    <rect key="frame" x="138" y="12" width="225" height="86"/>
+                                                    <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="0.37013056506849318" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EBi-XN-389" firstAttribute="top" secondItem="aHG-JG-6KB" secondAttribute="topMargin" constant="4" id="2DS-0z-5pr"/>
+                                                <constraint firstItem="EBi-XN-389" firstAttribute="width" secondItem="aHG-JG-6KB" secondAttribute="width" multiplier="0.6" id="D7q-0h-Drg"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="EBi-XN-389" secondAttribute="bottom" constant="4" id="WLk-v0-ybq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="EBi-XN-389" secondAttribute="trailing" constant="4" id="jVQ-m8-oTo"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="sentMessageLabel" destination="EBi-XN-389" id="uLs-Wu-9ue"/>
@@ -137,14 +144,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EM8-oP-QJ7">
-                                                    <rect key="frame" x="8" y="44" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EM8-oP-QJ7">
+                                                    <rect key="frame" x="8" y="8" width="225" height="94"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.18268407534246575" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EM8-oP-QJ7" firstAttribute="width" secondItem="513-tf-LZc" secondAttribute="width" multiplier="0.6" id="2gr-dM-QIm"/>
+                                                <constraint firstItem="EM8-oP-QJ7" firstAttribute="leading" secondItem="513-tf-LZc" secondAttribute="leadingMargin" id="SxW-1Y-WgI"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="EM8-oP-QJ7" secondAttribute="bottom" id="g1F-EH-e5j"/>
+                                                <constraint firstItem="EM8-oP-QJ7" firstAttribute="top" secondItem="513-tf-LZc" secondAttribute="topMargin" id="kqU-dI-hLa"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="receiveMessageLabel" destination="EM8-oP-QJ7" id="V1v-Bk-fbg"/>
@@ -192,4 +205,7 @@
             <point key="canvasLocation" x="895.20000000000005" y="27.436281859070466"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="7" width="1000" height="1000"/>
+    </resources>
 </document>

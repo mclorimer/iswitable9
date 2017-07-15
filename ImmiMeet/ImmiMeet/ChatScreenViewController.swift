@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class ChatScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var msgData = [PMessage]()
@@ -19,8 +18,10 @@ class ChatScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var messageTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.msgData = PubNubManager.shared.msgData
-
+        self.chatScreenTableView.rowHeight = UITableViewAutomaticDimension
+        self.chatScreenTableView.estimatedRowHeight = 100
+        //self.msgData = PubNubManager.shared.msgData
+        msgData = DataMessenger.getMessages()!
         // Do any additional setup after loading the view.
     }
 
@@ -38,17 +39,23 @@ class ChatScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if self.msgData[indexPath.row].status == "received" {
+    
+        let message = self.msgData[indexPath.row]
+        if message.status == "received" {
             let receiveMessageCell = tableView.dequeueReusableCell(withIdentifier: "receiveMessageCellID") as! ReceiveTableViewCell
+            receiveMessageCell.receiveMessageLabel.text = message.message
             return receiveMessageCell
-        } else{
+        } else {
             let sentMessageCell = tableView.dequeueReusableCell(withIdentifier: "sentMessageCellID") as! SentMessageTableViewCell
+            sentMessageCell.sentMessageLabel.text = message.message
             return sentMessageCell
         }
     }
     
     func updateMessages() {
-        self.chatScreenTableView.reloadData()
+        guard let validChatScreenTableView = chatScreenTableView else { return }
+        //self.chatScreenTableView.reloadData()
+        self.validChatScreenTableView()
     }
     
     @IBAction func sendTapped(_ sender: UIButton) {

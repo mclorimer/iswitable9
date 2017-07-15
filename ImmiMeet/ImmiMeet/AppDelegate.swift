@@ -20,8 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         let tabBarController = UITabBarController()
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainVC = mainStoryboard.instantiateInitialViewController()
-        tabBarController.setViewControllers([mainVC!], animated: true)
+        let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "Discovery")
+        
+        tabBarController.setViewControllers([mainVC], animated: true)
+        
+        let tabBar = tabBarController.tabBar
+        let tabHome = tabBar.items![0]
+        tabHome.title = "Discovery"
+        tabHome.image = #imageLiteral(resourceName: "discoveryIcon")
+        //tabBarController.tabBarItem = UITabBarItem(title: "Discovery", image: #imageLiteral(resourceName: "discoveryIcon"), tag: 0)
+        
+        // UITabBarItem(title: "Title", image: UIImage(named: "someImage.png"), selectedImage: UIImage(named: "otherImage.png"))
         window?.rootViewController = tabBarController
         
         window?.makeKeyAndVisible()

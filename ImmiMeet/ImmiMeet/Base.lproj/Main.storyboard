@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="1240.8" y="80.50974512743629"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="Bk3-2T-I26">
             <objects>
-                <viewController storyboardIdentifier="Profile" id="WqO-7r-VX3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Profile" id="WqO-7r-VX3" customClass="ProfileViewController" customModule="ImmiMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Nh-x3-9uG"/>
                         <viewControllerLayoutGuide type="bottom" id="7pj-aO-t0p"/>
@@ -153,24 +153,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Rec" id="Gjp-FD-P0o">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Rec" textLabel="7nC-Bn-TeO" detailTextLabel="1GE-by-Lic" style="IBUITableViewCellStyleSubtitle" id="Gjp-FD-P0o">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gjp-FD-P0o" id="2KH-id-lcw">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Namey is so cool!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iP8-mS-qUe">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7nC-Bn-TeO">
+                                                    <rect key="frame" x="15" y="4" width="34" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdg-SM-uPL">
-                                                    <rect key="frame" x="8" y="22" width="359" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1GE-by-Lic">
+                                                    <rect key="frame" x="15" y="25" width="33" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -217,8 +217,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.94722630033557043" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="downVotes" destination="b35-3m-x7z" id="PM0-vD-oxR"/>
+                        <outlet property="recTable" destination="aie-1y-q7B" id="VHw-kT-YTP"/>
+                        <outlet property="upVotes" destination="pYO-cP-hAA" id="dWZ-op-2tY"/>
+                        <outlet property="userBlurb" destination="DMr-qC-qwf" id="apw-cA-IQe"/>
+                        <outlet property="userLanguage" destination="D6O-tB-xF5" id="1BL-Zx-aKL"/>
+                        <outlet property="userName" destination="lQO-ha-hTC" id="Zq5-KJ-UUH"/>
+                        <outlet property="userOrigin" destination="yp2-3q-Nx8" id="l7c-Ni-WXe"/>
+                        <outlet property="userPic" destination="gNV-ac-jgq" id="rQI-iP-NFZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="465-Y3-7p9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

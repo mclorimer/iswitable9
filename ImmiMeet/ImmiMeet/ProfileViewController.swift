@@ -19,16 +19,28 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var upVotes: UILabel!
     @IBOutlet weak var downVotes: UILabel!
     
+    @IBOutlet weak var recTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // grab the correct user pic, name, origin, language, blurb, up/down votes from user object
+        
+        recTable.register(UITableViewCell.self, forCellReuseIdentifier: "Rec")
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // style user pic once we grab it
+        
+        userPic.layer.borderWidth = 2
+        userPic.layer.borderColor = UIColor.black.cgColor
+        userPic.layer.cornerRadius = 64
+        userPic.clipsToBounds = true
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    // add a tableview datasource and delegate (extension?)
     
 
     /*

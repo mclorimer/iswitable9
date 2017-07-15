@@ -38,9 +38,13 @@ class APIRequestManager {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
         
+        guard let languageCode = LanguageCode.languageInput[comment.targetLanguage] else {
+            return comment
+        }
+        
         let bodyDict: [String : String] = [
             "q" : comment.originalString,
-            "target" : comment.targetLanguage,
+            "target" : languageCode,
             ]
         
         do {
@@ -56,23 +60,21 @@ class APIRequestManager {
         session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
             
             if error != nil {
-                print(error!)   
+                print(error!)
             }
             
             if data != nil {
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String:Any]
-    
-                    guard
-                    let data = json!["data"] as? [String : Any],
-                    let translations = data["translations"] as? [String : Any],
-                        let translatedText = translations["translatedText"] as? String else {
-                            return
-                    }
+                    let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String : Any]
+                    
+                    guard let data = json!["data"] as? [String : Any],
+                        let translations = data["translations"] as? [String : Any],
+                        let translatedText = translations["translatedText"] as? String else { return }
                     
                     placeholderComment = Comment(id: comment.id, translated: true, originalString: comment.originalString, translatedString: translatedText, originaLanguage: comment.originalString, targetLanguage: comment.targetLanguage, authorID: comment.authorID)
-                        print(placeholderComment ?? "Nope!")
+                    print(placeholderComment ?? "Nope!")
                 }
+                    
                 catch {
                     print("Error serializing: \(error)")
                 }

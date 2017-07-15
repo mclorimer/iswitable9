@@ -17,8 +17,6 @@ class Comment {
     var targetLanguage: String
     var authorID: Int
     
-    
-    
     init(
         id: Int,
         translated: Bool,

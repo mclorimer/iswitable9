@@ -53,9 +53,10 @@ class ChatScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func updateMessages() {
-        guard let validChatScreenTableView = chatScreenTableView else { return }
+        
+//        guard let validChatScreenTableView = chatScreenTableView else { return }
         //self.chatScreenTableView.reloadData()
-        self.validChatScreenTableView()
+//        self.chatScreenTableView.data = ["hello"]
     }
     
     @IBAction func sendTapped(_ sender: UIButton) {

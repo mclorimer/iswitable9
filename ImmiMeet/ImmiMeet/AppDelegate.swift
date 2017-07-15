@@ -60,27 +60,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             allowProgrammableConstraints([immiLabel!, meetLabel!, immimeetIcon!])
             
+            immiLabel!.text = "IMMI"
+            meetLabel!.text = "MEET"
+            immimeetIcon!.image = #imageLiteral(resourceName: "immimeetIcon")
+            
+            immiLabel!.font = UIFont.systemFont(ofSize: 30)
+            meetLabel!.font = UIFont.systemFont(ofSize: 30)
+            
             _ = [
-                immiLabel!.trailingAnchor.constraint(equalTo: window.leadingAnchor)
-                , meetLabel!.leadingAnchor.constraint(equalTo: window.trailingAnchor)
-                , immimeetIcon!.bottomAnchor.constraint(equalTo: window.topAnchor)
+                immiLabel!.leadingAnchor.constraint(equalTo: window.leadingAnchor)
+                , immiLabel!.widthAnchor.constraint(equalToConstant: 200)
+                , immiLabel!.heightAnchor.constraint(equalToConstant: 200)
+                , meetLabel!.trailingAnchor.constraint(equalTo: window.trailingAnchor)
+                , meetLabel!.widthAnchor.constraint(equalToConstant: 200)
+                , meetLabel!.heightAnchor.constraint(equalToConstant: 200)
+                , immimeetIcon!.widthAnchor.constraint(equalToConstant: 200)
+                , immimeetIcon!.heightAnchor.constraint(equalToConstant: 200)
+                , immimeetIcon!.topAnchor.constraint(equalTo: window.topAnchor)
             ].map { $0.isActive = true }
             
-//            UIView.animateKeyframes(withDuration: 5, delay: 0, options: [UIViewKeyframeAnimationOptions.calculationModeLinear], animations: {
-//                
-//                UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.33) {
-//                    self.immiLabel!.layer.backgroundColor = UIColor.black.cgColor
-//                }
-//                
-//                UIView.addKeyframe(withRelativeStartTime: 0.33, relativeDuration: 0.33) {
-//                    self.immiLabel!.layer.backgroundColor = UIColor.black.cgColor
-//                }
-//                
-//                UIView.addKeyframe(withRelativeStartTime: 0.66, relativeDuration: 0.33) {
-//                    self.immiLabel!.layer.backgroundColor = UIColor.black.cgColor
-//                }
-//            
-//            })
+            UIView.animate(withDuration: 5, animations: {
+                self.immiLabel!.center.x = self.immimeetIcon!.frame.minX
+                self.immiLabel!.center.y = 0
+                self.meetLabel!.center.x = self.immimeetIcon!.frame.maxX
+                self.meetLabel!.center.y = 0
+                self.immimeetIcon!.center.y = window.frame.midY
+                self.immimeetIcon!.center.x = 0
+            }, completion: nil)
             
         }
         

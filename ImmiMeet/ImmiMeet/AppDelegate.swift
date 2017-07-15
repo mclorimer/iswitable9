@@ -20,8 +20,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         let tabBarController = UITabBarController()
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainVC = mainStoryboard.instantiateInitialViewController()
-        tabBarController.setViewControllers([mainVC!], animated: true)
+        let profileVC = mainStoryboard.instantiateViewController(withIdentifier: "Profile")
+        let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "Discovery")
+        let chatVC = mainStoryboard.instantiateViewController(withIdentifier: "Chat")
+        
+        tabBarController.setViewControllers([profileVC, mainVC, chatVC], animated: true)
+        
+        let tabBar = tabBarController.tabBar
+        
+        let tabProfile = tabBar.items![0]
+        tabProfile.title = "Profile"
+        tabProfile.image = #imageLiteral(resourceName: "profileIcon")
+        
+        let tabDiscovery = tabBar.items![1]
+        tabDiscovery.title = "Discovery"
+        tabDiscovery.image = #imageLiteral(resourceName: "discoveryIcon")
+        
+        let tabChat = tabBar.items![2]
+        tabChat.title = "Chat"
+        tabChat.image = #imageLiteral(resourceName: "chatIcon")
+        
         window?.rootViewController = tabBarController
         
         window?.makeKeyAndVisible()

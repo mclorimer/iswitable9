@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
 
     // Stores reference on PubNub client to make sure what it won't be released.
     var client: PubNub!
-    var pubnubManager = PubNubManager()
     var window: UIWindow?
 
     var immiLabel: UILabel?
@@ -160,7 +159,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
             // Message has been received on channel stored in message.data.channel.
         }
         
-        pubnubManager.shared.receive(String(describing: message.data.message!))
+        PubNubManager.shared.receive(String(describing: message.data.message!))
+        
+        //pubnubManager.shared.receive(String(describing: message.data.message!))
         print("Received message: \(String(describing: message.data.message!)) on channel \(message.data.channel) " +
             "at \(message.data.timetoken)")
     }

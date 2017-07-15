@@ -11,10 +11,10 @@ import PubNub
 
 class PubNubManager {
     
-    let shared = PubNubManager()
+    static let shared = PubNubManager()
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    public init(){}
+    private init(){}
     
     func write(_ message: String) {
         guard let validClient = appDelegate.client else { return }

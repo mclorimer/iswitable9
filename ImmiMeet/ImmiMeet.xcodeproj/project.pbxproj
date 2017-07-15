@@ -17,9 +17,12 @@
 		9E71E4A11F19F66E00874C69 /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71E4A01F19F66E00874C69 /* APIRequestManager.swift */; };
 		9E71E4A31F19F7F500874C69 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71E4A21F19F7F500874C69 /* Comment.swift */; };
 		9E71E4A51F1A06D700874C69 /* LanguageCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71E4A41F1A06D700874C69 /* LanguageCodes.swift */; };
+		D6340F9256A5038D14F7A5CE /* Pods_ImmiMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACDFE59870124AA6056E2AB /* Pods_ImmiMeet.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23796EA979DD3998C5214C55 /* Pods-ImmiMeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmiMeet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImmiMeet/Pods-ImmiMeet.debug.xcconfig"; sourceTree = "<group>"; };
+		7ACDFE59870124AA6056E2AB /* Pods_ImmiMeet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmiMeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D323871F19CC9C0035AEFE /* ImmiMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmiMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D3238A1F19CC9C0035AEFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81D3238F1F19CC9C0035AEFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		9E71E4A01F19F66E00874C69 /* APIRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
 		9E71E4A21F19F7F500874C69 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		9E71E4A41F1A06D700874C69 /* LanguageCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageCodes.swift; sourceTree = "<group>"; };
+		D5030A1CE33B6A410567796E /* Pods-ImmiMeet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmiMeet.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImmiMeet/Pods-ImmiMeet.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6340F9256A5038D14F7A5CE /* Pods_ImmiMeet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7AD42AF5D956C75B421FF2C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7ACDFE59870124AA6056E2AB /* Pods_ImmiMeet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		81D3237E1F19CC9C0035AEFE = {
 			isa = PBXGroup;
 			children = (
 				81D323891F19CC9C0035AEFE /* ImmiMeet */,
 				81D323881F19CC9C0035AEFE /* Products */,
+				EB6BA08840B3E360E9C91428 /* Pods */,
+				7AD42AF5D956C75B421FF2C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,10 +90,18 @@
 				81D323931F19CC9C0035AEFE /* LaunchScreen.storyboard */,
 				81D3238E1F19CC9C0035AEFE /* Main.storyboard */,
 				9E71E49C1F19ED5400874C69 /* User.swift */,
-				81D3238C1F19CC9C0035AEFE /* ViewController.swift */,
 				9E71E4A41F1A06D700874C69 /* LanguageCodes.swift */,
 			);
 			path = ImmiMeet;
+			sourceTree = "<group>";
+		};
+		EB6BA08840B3E360E9C91428 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23796EA979DD3998C5214C55 /* Pods-ImmiMeet.debug.xcconfig */,
+				D5030A1CE33B6A410567796E /* Pods-ImmiMeet.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,9 +111,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81D323991F19CC9C0035AEFE /* Build configuration list for PBXNativeTarget "ImmiMeet" */;
 			buildPhases = (
+				B29AD40DE0D8A5AA1EAABFF0 /* [CP] Check Pods Manifest.lock */,
 				81D323831F19CC9C0035AEFE /* Sources */,
 				81D323841F19CC9C0035AEFE /* Frameworks */,
 				81D323851F19CC9C0035AEFE /* Resources */,
+				964C0038360C770D1EDD193F /* [CP] Embed Pods Frameworks */,
+				9E553096FC9AE991805E2780 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,6 +175,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		964C0038360C770D1EDD193F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmiMeet/Pods-ImmiMeet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E553096FC9AE991805E2780 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmiMeet/Pods-ImmiMeet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B29AD40DE0D8A5AA1EAABFF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		81D323831F19CC9C0035AEFE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -158,7 +232,6 @@
 				9E71E4A51F1A06D700874C69 /* LanguageCodes.swift in Sources */,
 				9E71E4A31F19F7F500874C69 /* Comment.swift in Sources */,
 				9E71E4A11F19F66E00874C69 /* APIRequestManager.swift in Sources */,
-				81D3238D1F19CC9C0035AEFE /* ViewController.swift in Sources */,
 				81D3238B1F19CC9C0035AEFE /* AppDelegate.swift in Sources */,
 				81D3239F1F19F5210035AEFE /* DiscoveryViewController.swift in Sources */,
 				9E71E49D1F19ED5400874C69 /* User.swift in Sources */,
@@ -284,6 +357,7 @@
 		};
 		81D3239A1F19CC9C0035AEFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23796EA979DD3998C5214C55 /* Pods-ImmiMeet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GD7JHZ9557;
@@ -298,6 +372,7 @@
 		};
 		81D3239B1F19CC9C0035AEFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5030A1CE33B6A410567796E /* Pods-ImmiMeet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GD7JHZ9557;

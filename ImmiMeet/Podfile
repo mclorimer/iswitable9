@@ -6,5 +6,7 @@ target 'ImmiMeet' do
   use_frameworks!
 
   # Pods for ImmiMeet
+pod ‘Firebase’
+pod ‘Firebase/Database’
 
 end

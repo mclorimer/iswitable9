@@ -4,4 +4,4 @@ We would like to personally thank each and every person, especially those who ar
 
 <img width = "800" src = "https://raw.githubusercontent.com/mclorimer/iswitable9/master/Table_9.jpg">
 
-Contributers (pictured from left to right): Michael "Lori" Lorimer, Zak Aroui, Ana Ma, Liam Kane, Marty Avedon, Chris Lee, Vic Zhong, Max Sado
+Contributers (pictured from left to right): Michael "Lori" Lorimer, Zak Aroui, Ana Ma, Liam Kane, Marty Avedon, Chris Lee, Vic Zhong, Max Rosado

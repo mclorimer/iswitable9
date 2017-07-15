@@ -20,17 +20,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         let tabBarController = UITabBarController()
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let profileVC = mainStoryboard.instantiateViewController(withIdentifier: "Profile")
         let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "Discovery")
+        let chatVC = mainStoryboard.instantiateViewController(withIdentifier: "Chat")
         
-        tabBarController.setViewControllers([mainVC], animated: true)
+        tabBarController.setViewControllers([profileVC, mainVC, chatVC], animated: true)
         
         let tabBar = tabBarController.tabBar
-        let tabHome = tabBar.items![0]
-        tabHome.title = "Discovery"
-        tabHome.image = #imageLiteral(resourceName: "discoveryIcon")
-        //tabBarController.tabBarItem = UITabBarItem(title: "Discovery", image: #imageLiteral(resourceName: "discoveryIcon"), tag: 0)
         
-        // UITabBarItem(title: "Title", image: UIImage(named: "someImage.png"), selectedImage: UIImage(named: "otherImage.png"))
+        let tabProfile = tabBar.items![0]
+        tabProfile.title = "Profile"
+        tabProfile.image = #imageLiteral(resourceName: "profileIcon")
+        
+        let tabDiscovery = tabBar.items![1]
+        tabDiscovery.title = "Discovery"
+        tabDiscovery.image = #imageLiteral(resourceName: "discoveryIcon")
+        
+        let tabChat = tabBar.items![2]
+        tabChat.title = "Chat"
+        tabChat.image = #imageLiteral(resourceName: "chatIcon")
+        
         window?.rootViewController = tabBarController
         
         window?.makeKeyAndVisible()

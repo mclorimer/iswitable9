@@ -12,12 +12,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var immiLabel: UILabel?
+    var meetLabel: UILabel?
+    var immimeetIcon: UIImageView?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         window = UIWindow(frame: UIScreen.main.bounds)
+        
         let tabBarController = UITabBarController()
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let profileVC = mainStoryboard.instantiateViewController(withIdentifier: "Profile")
@@ -43,6 +46,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = tabBarController
         
         window?.makeKeyAndVisible()
+        
+        // animation for splash
+        
+        if let window = self.window {
+            immiLabel = UILabel()
+            meetLabel = UILabel()
+            immimeetIcon = UIImageView()
+            
+            window.addSubview(immiLabel!)
+            window.addSubview(meetLabel!)
+            window.addSubview(immimeetIcon!)
+            
+            allowProgrammableConstraints([immiLabel!, meetLabel!, immimeetIcon!])
+            
+            immiLabel!.text = "IMMI"
+            meetLabel!.text = "MEET"
+            immimeetIcon!.image = #imageLiteral(resourceName: "immimeetIcon")
+            
+            immiLabel!.textColor = .blue
+            meetLabel!.textColor = .blue
+            
+            immiLabel!.font = UIFont(name: "Futura-CondensedExtraBold", size: 60)
+            meetLabel!.font = UIFont(name: "Futura-CondensedExtraBold", size: 60)
+            
+            _ = [
+                  immiLabel!.leadingAnchor.constraint(equalTo: window.leadingAnchor)
+                , immiLabel!.centerYAnchor.constraint(equalTo: window.centerYAnchor)
+                , meetLabel!.trailingAnchor.constraint(equalTo: window.trailingAnchor)
+                , meetLabel!.centerYAnchor.constraint(equalTo: immiLabel!.centerYAnchor)
+                , immimeetIcon!.centerXAnchor.constraint(equalTo: window.centerXAnchor)
+                , immimeetIcon!.widthAnchor.constraint(equalToConstant: 100)
+                , immimeetIcon!.heightAnchor.constraint(equalToConstant: 100)
+                , immimeetIcon!.centerYAnchor.constraint(equalTo: window.centerYAnchor)
+            ].map { $0.isActive = true }
+            
+            UIView.animate(withDuration: 1, animations: {
+                self.immiLabel!.center.x = window.frame.midX
+                self.meetLabel!.center.x = -(window.frame.midX)
+                self.immimeetIcon!.center.y = window.frame.midY
+            }, completion: { finish in
+                UIView.animate(withDuration: 1.5, animations: {
+                self.immiLabel!.alpha = 0
+                self.meetLabel!.alpha = 0
+                self.immimeetIcon!.alpha = 0
+                })
+            })
+            
+        }
         
         return true
     }

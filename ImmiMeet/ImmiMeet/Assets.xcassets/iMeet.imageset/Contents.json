@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icons8-Female Profile Filled-50.png",
+      "filename" : "icons8-Meeting Filled-100.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icons8-Female Profile Filled-51.png",
+      "filename" : "icons8-Meeting Filled-101.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icons8-Female Profile Filled-52.png",
+      "filename" : "icons8-Meeting Filled-102.png",
       "scale" : "3x"
     }
   ],

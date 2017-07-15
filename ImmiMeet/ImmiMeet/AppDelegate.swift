@@ -8,6 +8,10 @@
 
 import UIKit
 import PubNub
+import ChatSDKCore
+import ChatSDKUI
+import ChatSDKCoreData
+import ChatSDKFirebaseAdapter
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
@@ -18,23 +22,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        BInterfaceManager.shared().a = BDefaultInterfaceAdapter.init()
+        BNetworkManager.shared().a = BFirebaseNetworkAdapter.init()
+        BStorageManager.shared().a = BCoreDataManager.init()
         
-        // Initialize and configure PubNub client instance
-        let configuration = PNConfiguration(publishKey: "pub-c-74172a25-b815-4257-b661-9497fe0c5794", subscribeKey: "sub-c-bc5063a4-692f-11e7-9aa9-02ee2ddab7fe")
-        self.client = PubNub.clientWithConfiguration(configuration)
-        self.client.addListener(self)
+        let loginViewController = BAppTabBarController.init(nibName: nil, bundle: nil)
+        BNetworkManager.shared().a.auth().setChallenge(BLoginViewController.init(nibName: nil, bundle: nil));
         
-        // Subscribe to demo channel with presence observation
-        self.client.subscribeToChannels(["ImmiMeetChannel"], withPresence: true)
+        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = loginViewController;
+        self.window?.makeKeyAndVisible();
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        let tabBarController = UITabBarController()
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainVC = mainStoryboard.instantiateInitialViewController()
-        tabBarController.setViewControllers([mainVC!], animated: true)
-        window?.rootViewController = tabBarController
-        
-        window?.makeKeyAndVisible()
+//        // Initialize and configure PubNub client instance
+//        let configuration = PNConfiguration(publishKey: "pub-c-74172a25-b815-4257-b661-9497fe0c5794", subscribeKey: "sub-c-bc5063a4-692f-11e7-9aa9-02ee2ddab7fe")
+//        self.client = PubNub.clientWithConfiguration(configuration)
+//        self.client.addListener(self)
+//        
+//        // Subscribe to demo channel with presence observation
+//        self.client.subscribeToChannels(["ImmiMeetChannel"], withPresence: true)
+//        
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        let tabBarController = UITabBarController()
+//        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let mainVC = mainStoryboard.instantiateInitialViewController()
+//        tabBarController.setViewControllers([mainVC!], animated: true)
+//        window?.rootViewController = tabBarController
+//        
+//        window?.makeKeyAndVisible()
         
         return true
     }

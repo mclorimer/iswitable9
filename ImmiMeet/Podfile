@@ -9,5 +9,13 @@ target 'ImmiMeet' do
 
   # Pods for ImmiMeet
   pod "PubNub", "~> 4"
+  # pod "ChatSDK", :path => “/Users/anama/Projects/Hackathon/iswitable9/chat-sdk-ios/ChatSDK"
+  pod "ChatSDKCore", :path => "/Users/anama/Projects/Hackathon/iswitable9/chat-sdk-ios/ChatSDK/ChatSDKCore"
+  pod "ChatSDKUI", :path => "/Users/anama/Projects/Hackathon/iswitable9/chat-sdk-ios/ChatSDK/ChatSDKUI"
+  pod "ChatSDKCoreData", :path => "/Users/anama/Projects/Hackathon/iswitable9/chat-sdk-ios/ChatSDK/ChatSDKCoreData"
+  pod "ChatSDKFirebaseAdapter", :path => "/Users/anama/Projects/Hackathon/iswitable9/chat-sdk-ios/ChatSDK/ChatSDKFirebaseAdapter"
+  # pod "Firebase/Database"
+  # pod "Firebase/Auth"
+  # pod "Firebase/Core"
 
 end

@@ -21,10 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
     var pubnubManager = PubNubManager()
     var window: UIWindow?
 
-    var immiLabel: UILabel?
+  var immiLabel: UILabel?
     var meetLabel: UILabel?
     var immimeetIcon: UIImageView?
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 //        BInterfaceManager.shared().a = BDefaultInterfaceAdapter.init()
@@ -74,6 +73,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
         
         window?.makeKeyAndVisible()
         
+        DataMessenger.userReceiver = mainVC as! UserReceiver
+        DataMessenger.getUsers()
         // animation for splash
         
         if let window = self.window {

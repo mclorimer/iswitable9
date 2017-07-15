@@ -8,9 +8,9 @@
 
 import UIKit
 
-class DiscoveryViewController: UIViewController {
+class DiscoveryViewController: UIViewController, UserReceiver {
 
-    var users = [User]()
+    var users = [ProxyUser]()
     
     @IBOutlet weak var discoveryTableView: UITableView!
     
@@ -26,6 +26,9 @@ class DiscoveryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func send(users: [ProxyUser]) {
+        self.users = users
+    }
 
 }
 
@@ -43,7 +46,14 @@ extension DiscoveryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! UserTableViewCell
         
+        let currentUser = self.users[indexPath.row]
         
+        cell.set(user: currentUser)
+//        cell.imageView?.image = UIImage(named: "\(arc4random_uniform(10))")
+//        cell.imageView?.contentMode = .scaleAspectFit
+        
+        cell.profileImageView.image = UIImage(named: "\(currentUser.id % 10)")
+        cell.profileImageView.contentMode = .scaleAspectFit
         
         return cell
     }

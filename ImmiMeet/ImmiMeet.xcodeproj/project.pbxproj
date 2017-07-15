@@ -96,7 +96,7 @@
 				TargetAttributes = {
 					81D323861F19CC9C0035AEFE = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = N2N3K3G7JW;
+						DevelopmentTeam = GD7JHZ9557;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -263,8 +263,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = N2N3K3G7JW;
+				DEVELOPMENT_TEAM = GD7JHZ9557;
 				INFOPLIST_FILE = ImmiMeet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.hackathon.iswi.ImmiMeet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,8 +277,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = N2N3K3G7JW;
+				DEVELOPMENT_TEAM = GD7JHZ9557;
 				INFOPLIST_FILE = ImmiMeet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.hackathon.iswi.ImmiMeet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,6 +306,7 @@
 				81D3239B1F19CC9C0035AEFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

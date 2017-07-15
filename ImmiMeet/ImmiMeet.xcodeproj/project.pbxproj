@@ -12,6 +12,7 @@
 		81D323901F19CC9C0035AEFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81D3238E1F19CC9C0035AEFE /* Main.storyboard */; };
 		81D323921F19CC9C0035AEFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81D323911F19CC9C0035AEFE /* Assets.xcassets */; };
 		81D323951F19CC9C0035AEFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81D323931F19CC9C0035AEFE /* LaunchScreen.storyboard */; };
+		9E71E49D1F19ED5400874C69 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71E49C1F19ED5400874C69 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		81D323911F19CC9C0035AEFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81D323941F19CC9C0035AEFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81D323961F19CC9C0035AEFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E71E49C1F19ED5400874C69 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				81D323911F19CC9C0035AEFE /* Assets.xcassets */,
 				81D323931F19CC9C0035AEFE /* LaunchScreen.storyboard */,
 				81D323961F19CC9C0035AEFE /* Info.plist */,
+				9E71E49C1F19ED5400874C69 /* User.swift */,
 			);
 			path = ImmiMeet;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				81D3238D1F19CC9C0035AEFE /* ViewController.swift in Sources */,
 				81D3238B1F19CC9C0035AEFE /* AppDelegate.swift in Sources */,
+				9E71E49D1F19ED5400874C69 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +308,7 @@
 				81D3239B1F19CC9C0035AEFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

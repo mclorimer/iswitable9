@@ -90,6 +90,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.immiLabel!.alpha = 0
                 self.meetLabel!.alpha = 0
                 self.immimeetIcon!.alpha = 0
+                }, completion:  { finish in
+                    self.immiLabel!.removeFromSuperview()
+                    self.meetLabel!.removeFromSuperview()
+                    self.immimeetIcon!.removeFromSuperview()
                 })
             })
             

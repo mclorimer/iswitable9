@@ -15,7 +15,7 @@ As of now, there are 100 fake User accounts stored within a JSON dictionary.
 
 Slides from our demo are available <a href = "https://docs.google.com/presentation/d/1Nnjc_kECfNs9nZO-cJGBsRTnkdkEXmh70BMlbWTAfks/edit?usp=sharing">here</a>
 
-<h3>Thanks</h3>
+<h2>Thanks</h2>
 
 We would like to personally thank each and every person, especially those who are members of the immigrant community here in New York City, who made this event possible. 
 
